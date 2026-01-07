@@ -38,7 +38,7 @@ const ProductsPage = () => {
         if (isDirectProductCategory(category)) {
             return true;
         }
-        if (productType) {
+        if (productType || search) {
             return true;
         }
         return false;
@@ -125,7 +125,7 @@ const ProductsPage = () => {
         } finally {
             setLoading(false);
         }
-    }, [category, subCategory, productType, selectedBrand, minPrice, maxPrice, sort]);
+    }, [category, subCategory, productType, selectedBrand, minPrice, maxPrice, sort, search]);
 
     useEffect(() => {
         setCategory(searchParams.get('category') || '');
