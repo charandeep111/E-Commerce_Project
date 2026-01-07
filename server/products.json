@@ -1,0 +1,2897 @@
+[
+  {
+    "batchIndex": 1,
+    "products": [
+      {
+        "id": "8356ecb3-c5b5-4446-9f6c-4d25604ba824",
+        "name": "Digital Smart 47C6",
+        "slug": "digital-smart-47c6",
+        "description": "Premium Watches from Seiko. Experience styling and function with the Digital Smart 47C6.",
+        "price": 119314,
+        "discountPrice": null,
+        "stock": 145,
+        "images": [
+          "https://images.unsplash.com/photo-1539874754764-5a96559165b0?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Watches",
+        "tags": [
+          "watches",
+          "seiko",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Seiko",
+          "weight": "1635g"
+        },
+        "createdAt": "2025-02-18T23:54:06.306Z",
+        "updatedAt": "2025-08-10T11:32:02.754Z"
+      },
+      {
+        "id": "134de2b0-1822-495e-9e0b-e01c4021cf38",
+        "name": "Chronograph Pro D5C2",
+        "slug": "chronograph-pro-d5c2",
+        "description": "Premium Watches from Titan. Experience styling and function with the Chronograph Pro D5C2.",
+        "price": 7545,
+        "discountPrice": null,
+        "stock": 149,
+        "images": [
+          "https://images.unsplash.com/photo-1526045612212-70fadcd9c94d?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Watches",
+        "tags": [
+          "watches",
+          "titan",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Titan",
+          "weight": "1548g"
+        },
+        "createdAt": "2025-11-16T20:10:53.430Z",
+        "updatedAt": "2025-11-20T09:04:32.126Z"
+      },
+      {
+        "id": "39802cff-dd77-44ee-8445-7de0f054451c",
+        "name": "Chronograph Pro D9F1",
+        "slug": "chronograph-pro-d9f1",
+        "description": "Premium Watches from Fossil. Experience styling and function with the Chronograph Pro D9F1.",
+        "price": 120973,
+        "discountPrice": null,
+        "stock": 87,
+        "images": [
+          "https://images.unsplash.com/photo-1526045612212-70fadcd9c94d?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Watches",
+        "tags": [
+          "watches",
+          "fossil",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Fossil",
+          "weight": "914g"
+        },
+        "createdAt": "2025-02-10T12:40:25.666Z",
+        "updatedAt": "2025-03-01T03:34:28.314Z"
+      },
+      {
+        "id": "06fe4066-cbc2-49fd-95b4-9801da81c912",
+        "name": "Classic Analog FD10",
+        "slug": "classic-analog-fd10",
+        "description": "Premium Watches from Fossil. Experience styling and function with the Classic Analog FD10.",
+        "price": 42678,
+        "discountPrice": null,
+        "stock": 172,
+        "images": [
+          "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Watches",
+        "tags": [
+          "watches",
+          "fossil",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Fossil",
+          "weight": "771g"
+        },
+        "createdAt": "2025-11-16T02:52:00.092Z",
+        "updatedAt": "2025-11-28T16:17:27.069Z"
+      },
+      {
+        "id": "5da12dfd-f912-4723-ad5d-219f461e1cf7",
+        "name": "Minimalist Gold C584",
+        "slug": "minimalist-gold-c584",
+        "description": "Premium Watches from Seiko. Experience styling and function with the Minimalist Gold C584.",
+        "price": 61298,
+        "discountPrice": 49038,
+        "stock": 106,
+        "images": [
+          "https://images.unsplash.com/photo-1542496658-e33a6d0d50e6?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Watches",
+        "tags": [
+          "watches",
+          "seiko",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Seiko",
+          "weight": "241g"
+        },
+        "createdAt": "2025-01-14T17:05:50.323Z",
+        "updatedAt": "2025-10-10T21:29:19.547Z"
+      },
+      {
+        "id": "97d23740-545f-48cd-91e7-9de32761e96b",
+        "name": "Minimalist Gold DDD0",
+        "slug": "minimalist-gold-ddd0",
+        "description": "Premium Watches from Titan. Experience styling and function with the Minimalist Gold DDD0.",
+        "price": 140144,
+        "discountPrice": 114918,
+        "stock": 184,
+        "images": [
+          "https://images.unsplash.com/photo-1526045612212-70fadcd9c94d?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Watches",
+        "tags": [
+          "watches",
+          "titan",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Titan",
+          "weight": "805g"
+        },
+        "createdAt": "2025-04-19T09:48:04.805Z",
+        "updatedAt": "2025-09-09T05:27:34.906Z"
+      },
+      {
+        "id": "92bb2578-37ea-4b0b-b7ff-8f8499a8cc2e",
+        "name": "Minimalist Gold 8F9A",
+        "slug": "minimalist-gold-8f9a",
+        "description": "Premium Watches from Rolex. Experience styling and function with the Minimalist Gold 8F9A.",
+        "price": 145087,
+        "discountPrice": null,
+        "stock": 194,
+        "images": [
+          "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Watches",
+        "tags": [
+          "watches",
+          "rolex",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Rolex",
+          "weight": "979g"
+        },
+        "createdAt": "2025-04-17T11:02:16.086Z",
+        "updatedAt": "2025-07-17T21:22:55.157Z"
+      },
+      {
+        "id": "c4e21073-f391-418c-8407-79a1d1f9b09e",
+        "name": "Digital Smart EB37",
+        "slug": "digital-smart-eb37",
+        "description": "Premium Watches from Fossil. Experience styling and function with the Digital Smart EB37.",
+        "price": 17892,
+        "discountPrice": null,
+        "stock": 84,
+        "images": [
+          "https://images.unsplash.com/photo-1539874754764-5a96559165b0?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Watches",
+        "tags": [
+          "watches",
+          "fossil",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Fossil",
+          "weight": "409g"
+        },
+        "createdAt": "2025-05-11T12:43:56.812Z",
+        "updatedAt": "2025-06-02T16:25:36.513Z"
+      },
+      {
+        "id": "c0c2d1e0-9f31-4667-aeb3-6743e8ba460e",
+        "name": "Digital Smart 8687",
+        "slug": "digital-smart-8687",
+        "description": "Premium Watches from Casio. Experience styling and function with the Digital Smart 8687.",
+        "price": 58461,
+        "discountPrice": null,
+        "stock": 119,
+        "images": [
+          "https://images.unsplash.com/photo-1526045612212-70fadcd9c94d?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Watches",
+        "tags": [
+          "watches",
+          "casio",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Casio",
+          "weight": "1402g"
+        },
+        "createdAt": "2025-04-13T20:21:51.869Z",
+        "updatedAt": "2025-06-29T01:05:13.015Z"
+      },
+      {
+        "id": "9fd57bc5-9030-4792-a2d1-a245e838e285",
+        "name": "Chronograph Pro A15D",
+        "slug": "chronograph-pro-a15d",
+        "description": "Premium Watches from Titan. Experience styling and function with the Chronograph Pro A15D.",
+        "price": 20444,
+        "discountPrice": 16968,
+        "stock": 63,
+        "images": [
+          "https://images.unsplash.com/photo-1542496658-e33a6d0d50e6?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Watches",
+        "tags": [
+          "watches",
+          "titan",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Titan",
+          "weight": "340g"
+        },
+        "createdAt": "2025-08-02T19:46:47.809Z",
+        "updatedAt": "2025-08-09T02:29:50.206Z"
+      },
+      {
+        "id": "16826f2f-9224-4d91-b944-002a1b5f96d8",
+        "name": "Galaxy S22 0595",
+        "slug": "galaxy-s22-0595",
+        "description": "Premium Mobiles from Samsung. Experience styling and function with the Galaxy S22 0595.",
+        "price": 8415,
+        "discountPrice": null,
+        "stock": 158,
+        "images": [
+          "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Mobiles",
+        "tags": [
+          "mobiles",
+          "samsung",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Samsung",
+          "weight": "175g"
+        },
+        "createdAt": "2025-08-17T17:13:57.832Z",
+        "updatedAt": "2025-11-21T11:19:09.814Z"
+      },
+      {
+        "id": "d4775b37-5a7f-463e-a70b-dcb09e4d2d9f",
+        "name": "Redmi Note ACF2",
+        "slug": "redmi-note-acf2",
+        "description": "Premium Mobiles from OnePlus. Experience styling and function with the Redmi Note ACF2.",
+        "price": 93833,
+        "discountPrice": 72251,
+        "stock": 132,
+        "images": [
+          "https://images.unsplash.com/photo-1573148195900-7845dcb9d127?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Mobiles",
+        "tags": [
+          "mobiles",
+          "oneplus",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "OnePlus",
+          "weight": "1126g"
+        },
+        "createdAt": "2025-03-24T15:53:04.296Z",
+        "updatedAt": "2025-08-29T05:21:28.291Z"
+      },
+      {
+        "id": "3d051cc2-d590-481c-ab4f-5ab91bf298e8",
+        "name": "Pixel 7 2228",
+        "slug": "pixel-7-2228",
+        "description": "Premium Mobiles from OnePlus. Experience styling and function with the Pixel 7 2228.",
+        "price": 50485,
+        "discountPrice": null,
+        "stock": 33,
+        "images": [
+          "https://images.unsplash.com/photo-1511707171634-61677c473f27?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Mobiles",
+        "tags": [
+          "mobiles",
+          "oneplus",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "OnePlus",
+          "weight": "1488g"
+        },
+        "createdAt": "2025-03-14T08:23:36.865Z",
+        "updatedAt": "2025-04-08T06:18:56.623Z"
+      },
+      {
+        "id": "1295374e-9b9a-45e2-93bb-a711473b01ed",
+        "name": "Redmi Note 0E9F",
+        "slug": "redmi-note-0e9f",
+        "description": "Premium Mobiles from Xiaomi. Experience styling and function with the Redmi Note 0E9F.",
+        "price": 32242,
+        "discountPrice": null,
+        "stock": 185,
+        "images": [
+          "https://images.unsplash.com/photo-1573148195900-7845dcb9d127?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Mobiles",
+        "tags": [
+          "mobiles",
+          "xiaomi",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Xiaomi",
+          "weight": "1549g"
+        },
+        "createdAt": "2025-06-27T04:09:52.969Z",
+        "updatedAt": "2025-08-02T23:04:44.091Z"
+      },
+      {
+        "id": "03dcc1d1-7d46-4fb4-aff5-2e5f70ac1097",
+        "name": "Redmi Note BEBD",
+        "slug": "redmi-note-bebd",
+        "description": "Premium Mobiles from Samsung. Experience styling and function with the Redmi Note BEBD.",
+        "price": 128653,
+        "discountPrice": 102922,
+        "stock": 26,
+        "images": [
+          "https://images.unsplash.com/photo-1573148195900-7845dcb9d127?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Mobiles",
+        "tags": [
+          "mobiles",
+          "samsung",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Samsung",
+          "weight": "685g"
+        },
+        "createdAt": "2025-09-07T17:49:30.073Z",
+        "updatedAt": "2025-10-03T16:52:12.022Z"
+      },
+      {
+        "id": "a7334843-ffc2-4e1b-b9a0-9cbafe210756",
+        "name": "Galaxy S22 8E9E",
+        "slug": "galaxy-s22-8e9e",
+        "description": "Premium Mobiles from Samsung. Experience styling and function with the Galaxy S22 8E9E.",
+        "price": 124034,
+        "discountPrice": null,
+        "stock": 168,
+        "images": [
+          "https://images.unsplash.com/photo-1511707171634-61677c473f27?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Mobiles",
+        "tags": [
+          "mobiles",
+          "samsung",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Samsung",
+          "weight": "402g"
+        },
+        "createdAt": "2024-12-14T19:08:42.050Z",
+        "updatedAt": "2025-04-23T21:48:17.446Z"
+      },
+      {
+        "id": "134b93a9-3f20-4188-8d3d-3e46814f5bc8",
+        "name": "Redmi Note BEC4",
+        "slug": "redmi-note-bec4",
+        "description": "Premium Mobiles from Samsung. Experience styling and function with the Redmi Note BEC4.",
+        "price": 68673,
+        "discountPrice": null,
+        "stock": 123,
+        "images": [
+          "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Mobiles",
+        "tags": [
+          "mobiles",
+          "samsung",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Samsung",
+          "weight": "1696g"
+        },
+        "createdAt": "2025-08-25T13:36:40.772Z",
+        "updatedAt": "2025-09-25T16:58:05.537Z"
+      },
+      {
+        "id": "f7e797e1-b18f-44e5-b746-7a4f2880a743",
+        "name": "iPhone 14 C671",
+        "slug": "iphone-14-c671",
+        "description": "Premium Mobiles from Google. Experience styling and function with the iPhone 14 C671.",
+        "price": 45833,
+        "discountPrice": null,
+        "stock": 170,
+        "images": [
+          "https://images.unsplash.com/photo-1511707171634-61677c473f27?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Mobiles",
+        "tags": [
+          "mobiles",
+          "google",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Google",
+          "weight": "950g"
+        },
+        "createdAt": "2025-10-21T00:53:01.628Z",
+        "updatedAt": "2025-12-07T05:25:40.043Z"
+      },
+      {
+        "id": "cda30ccb-a12d-434c-b0de-a8f3849b3769",
+        "name": "Galaxy S22 822C",
+        "slug": "galaxy-s22-822c",
+        "description": "Premium Mobiles from Samsung. Experience styling and function with the Galaxy S22 822C.",
+        "price": 78524,
+        "discountPrice": null,
+        "stock": 100,
+        "images": [
+          "https://images.unsplash.com/photo-1567581936302-adc88ac99d81?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Mobiles",
+        "tags": [
+          "mobiles",
+          "samsung",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Samsung",
+          "weight": "360g"
+        },
+        "createdAt": "2025-08-10T22:30:06.066Z",
+        "updatedAt": "2025-11-01T22:32:54.157Z"
+      },
+      {
+        "id": "a0d1be62-3e4d-470c-b326-4bebb624dc6a",
+        "name": "Galaxy S22 29D1",
+        "slug": "galaxy-s22-29d1",
+        "description": "Premium Mobiles from Xiaomi. Experience styling and function with the Galaxy S22 29D1.",
+        "price": 97553,
+        "discountPrice": 87797,
+        "stock": 132,
+        "images": [
+          "https://images.unsplash.com/photo-1573148195900-7845dcb9d127?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Mobiles",
+        "tags": [
+          "mobiles",
+          "xiaomi",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Xiaomi",
+          "weight": "237g"
+        },
+        "createdAt": "2025-04-08T18:18:00.612Z",
+        "updatedAt": "2025-10-07T07:56:01.425Z"
+      },
+      {
+        "id": "4433ceaa-53f2-4a09-a268-5eace0608ed3",
+        "name": "ZenBook Duo 2B3F",
+        "slug": "zenbook-duo-2b3f",
+        "description": "Premium Laptops from Asus. Experience styling and function with the ZenBook Duo 2B3F.",
+        "price": 173940,
+        "discountPrice": 123497,
+        "stock": 44,
+        "images": [
+          "https://images.unsplash.com/photo-1588872657578-838c6470814f?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Laptops",
+        "tags": [
+          "laptops",
+          "asus",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Asus",
+          "weight": "1931g"
+        },
+        "createdAt": "2025-10-26T04:11:45.303Z",
+        "updatedAt": "2025-11-10T00:27:38.044Z"
+      },
+      {
+        "id": "c3bbbaf2-6a67-4e2a-b07f-6141246e7c01",
+        "name": "ThinkPad X1 F220",
+        "slug": "thinkpad-x1-f220",
+        "description": "Premium Laptops from Asus. Experience styling and function with the ThinkPad X1 F220.",
+        "price": 183268,
+        "discountPrice": null,
+        "stock": 197,
+        "images": [
+          "https://images.unsplash.com/photo-1531297424005-27a3db1998f6?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Laptops",
+        "tags": [
+          "laptops",
+          "asus",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Asus",
+          "weight": "112g"
+        },
+        "createdAt": "2025-05-11T16:19:31.723Z",
+        "updatedAt": "2025-05-28T12:23:36.530Z"
+      },
+      {
+        "id": "edde0b83-23b3-4d64-a8be-1adff417ad43",
+        "name": "ZenBook Duo 0B16",
+        "slug": "zenbook-duo-0b16",
+        "description": "Premium Laptops from Dell. Experience styling and function with the ZenBook Duo 0B16.",
+        "price": 220865,
+        "discountPrice": 194361,
+        "stock": 181,
+        "images": [
+          "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Laptops",
+        "tags": [
+          "laptops",
+          "dell",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Dell",
+          "weight": "403g"
+        },
+        "createdAt": "2025-05-09T15:43:03.443Z",
+        "updatedAt": "2025-06-15T05:25:55.031Z"
+      },
+      {
+        "id": "71701cdf-dd08-4bc2-a483-b43b1f1d88b2",
+        "name": "ZenBook Duo EE9B",
+        "slug": "zenbook-duo-ee9b",
+        "description": "Premium Laptops from Apple. Experience styling and function with the ZenBook Duo EE9B.",
+        "price": 79474,
+        "discountPrice": null,
+        "stock": 56,
+        "images": [
+          "https://images.unsplash.com/photo-1531297424005-27a3db1998f6?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Laptops",
+        "tags": [
+          "laptops",
+          "apple",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Apple",
+          "weight": "1703g"
+        },
+        "createdAt": "2025-01-21T02:56:13.027Z",
+        "updatedAt": "2025-11-21T16:17:32.578Z"
+      },
+      {
+        "id": "7478e325-887b-4c6e-a8d5-44b30a86437b",
+        "name": "XPS 13 675F",
+        "slug": "xps-13-675f",
+        "description": "Premium Laptops from HP. Experience styling and function with the XPS 13 675F.",
+        "price": 58639,
+        "discountPrice": null,
+        "stock": 73,
+        "images": [
+          "https://images.unsplash.com/photo-1531297424005-27a3db1998f6?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Laptops",
+        "tags": [
+          "laptops",
+          "hp",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "HP",
+          "weight": "782g"
+        },
+        "createdAt": "2024-12-16T20:31:22.364Z",
+        "updatedAt": "2025-06-02T09:44:24.839Z"
+      },
+      {
+        "id": "04a0587d-6a14-4835-963c-d60c5a483824",
+        "name": "MacBook Air 6EAB",
+        "slug": "macbook-air-6eab",
+        "description": "Premium Laptops from HP. Experience styling and function with the MacBook Air 6EAB.",
+        "price": 200020,
+        "discountPrice": null,
+        "stock": 151,
+        "images": [
+          "https://images.unsplash.com/photo-1517336714731-489689fd1ca4?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Laptops",
+        "tags": [
+          "laptops",
+          "hp",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "HP",
+          "weight": "1084g"
+        },
+        "createdAt": "2025-08-27T05:38:57.805Z",
+        "updatedAt": "2025-10-03T15:03:47.697Z"
+      },
+      {
+        "id": "6b819767-e49b-4d5e-b6bf-afb50bb3f245",
+        "name": "MacBook Air CFAF",
+        "slug": "macbook-air-cfaf",
+        "description": "Premium Laptops from Asus. Experience styling and function with the MacBook Air CFAF.",
+        "price": 178956,
+        "discountPrice": null,
+        "stock": 149,
+        "images": [
+          "https://images.unsplash.com/photo-1588872657578-838c6470814f?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Laptops",
+        "tags": [
+          "laptops",
+          "asus",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Asus",
+          "weight": "675g"
+        },
+        "createdAt": "2025-03-19T23:43:10.688Z",
+        "updatedAt": "2025-07-29T20:29:49.003Z"
+      },
+      {
+        "id": "cebb662d-7ae2-4853-82bf-893fc712cb55",
+        "name": "XPS 13 3ED3",
+        "slug": "xps-13-3ed3",
+        "description": "Premium Laptops from HP. Experience styling and function with the XPS 13 3ED3.",
+        "price": 240649,
+        "discountPrice": 182893,
+        "stock": 50,
+        "images": [
+          "https://images.unsplash.com/photo-1517336714731-489689fd1ca4?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Laptops",
+        "tags": [
+          "laptops",
+          "hp",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "HP",
+          "weight": "1703g"
+        },
+        "createdAt": "2025-07-26T05:12:40.866Z",
+        "updatedAt": "2025-11-24T06:27:28.361Z"
+      },
+      {
+        "id": "6b836817-e261-4677-9b8c-ecfb2901e1f3",
+        "name": "ZenBook Duo E852",
+        "slug": "zenbook-duo-e852",
+        "description": "Premium Laptops from Apple. Experience styling and function with the ZenBook Duo E852.",
+        "price": 124921,
+        "discountPrice": null,
+        "stock": 46,
+        "images": [
+          "https://images.unsplash.com/photo-1588872657578-838c6470814f?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Laptops",
+        "tags": [
+          "laptops",
+          "apple",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Apple",
+          "weight": "766g"
+        },
+        "createdAt": "2024-12-10T10:48:41.523Z",
+        "updatedAt": "2025-06-09T01:26:59.825Z"
+      },
+      {
+        "id": "296db250-d9d6-4b46-990e-94ca283dd339",
+        "name": "ThinkPad X1 EB42",
+        "slug": "thinkpad-x1-eb42",
+        "description": "Premium Laptops from Lenovo. Experience styling and function with the ThinkPad X1 EB42.",
+        "price": 185341,
+        "discountPrice": 150126,
+        "stock": 53,
+        "images": [
+          "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Laptops",
+        "tags": [
+          "laptops",
+          "lenovo",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Lenovo",
+          "weight": "446g"
+        },
+        "createdAt": "2025-07-05T03:33:12.438Z",
+        "updatedAt": "2025-09-05T12:19:03.631Z"
+      },
+      {
+        "id": "432a6b0e-e235-44e6-a893-6408bea89d59",
+        "name": "In-Ear Buds 2710",
+        "slug": "in-ear-buds-2710",
+        "description": "Premium Headphones from JBL. Experience styling and function with the In-Ear Buds 2710.",
+        "price": 31047,
+        "discountPrice": 27321,
+        "stock": 119,
+        "images": [
+          "https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Headphones",
+        "tags": [
+          "headphones",
+          "jbl",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "JBL",
+          "weight": "750g"
+        },
+        "createdAt": "2025-06-22T08:14:06.921Z",
+        "updatedAt": "2025-11-24T13:05:32.754Z"
+      },
+      {
+        "id": "21d2e05c-bfca-49d0-ad86-44e7367c7128",
+        "name": "Studio Monitor 23A0",
+        "slug": "studio-monitor-23a0",
+        "description": "Premium Headphones from Sony. Experience styling and function with the Studio Monitor 23A0.",
+        "price": 7270,
+        "discountPrice": null,
+        "stock": 95,
+        "images": [
+          "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Headphones",
+        "tags": [
+          "headphones",
+          "sony",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Sony",
+          "weight": "1793g"
+        },
+        "createdAt": "2025-09-22T18:31:52.695Z",
+        "updatedAt": "2025-10-27T10:02:05.192Z"
+      },
+      {
+        "id": "28c83a4d-8b29-4951-b7f8-7a891ff49a65",
+        "name": "Noise Cancelling 3067",
+        "slug": "noise-cancelling-3067",
+        "description": "Premium Headphones from Beats. Experience styling and function with the Noise Cancelling 3067.",
+        "price": 25124,
+        "discountPrice": null,
+        "stock": 156,
+        "images": [
+          "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Headphones",
+        "tags": [
+          "headphones",
+          "beats",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Beats",
+          "weight": "1653g"
+        },
+        "createdAt": "2025-08-28T21:22:33.345Z",
+        "updatedAt": "2025-09-04T15:32:58.159Z"
+      },
+      {
+        "id": "5a299648-5908-4261-bd0c-cbba90e32816",
+        "name": "Noise Cancelling ED60",
+        "slug": "noise-cancelling-ed60",
+        "description": "Premium Headphones from Bose. Experience styling and function with the Noise Cancelling ED60.",
+        "price": 26421,
+        "discountPrice": null,
+        "stock": 177,
+        "images": [
+          "https://images.unsplash.com/photo-1583847268964-b8bd40940452?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Headphones",
+        "tags": [
+          "headphones",
+          "bose",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Bose",
+          "weight": "1178g"
+        },
+        "createdAt": "2025-11-17T23:21:32.838Z",
+        "updatedAt": "2025-12-02T22:35:19.766Z"
+      },
+      {
+        "id": "ac3cfbc6-f1d0-467c-b687-15bd0f6859a8",
+        "name": "In-Ear Buds AAF4",
+        "slug": "in-ear-buds-aaf4",
+        "description": "Premium Headphones from JBL. Experience styling and function with the In-Ear Buds AAF4.",
+        "price": 1649,
+        "discountPrice": null,
+        "stock": 81,
+        "images": [
+          "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Headphones",
+        "tags": [
+          "headphones",
+          "jbl",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "JBL",
+          "weight": "430g"
+        },
+        "createdAt": "2025-08-05T18:04:20.513Z",
+        "updatedAt": "2025-12-01T03:48:39.678Z"
+      },
+      {
+        "id": "302a6953-367b-4d55-bfa5-5d1625050990",
+        "name": "Wireless Over-Ear 02E5",
+        "slug": "wireless-over-ear-02e5",
+        "description": "Premium Headphones from Beats. Experience styling and function with the Wireless Over-Ear 02E5.",
+        "price": 33906,
+        "discountPrice": null,
+        "stock": 51,
+        "images": [
+          "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Headphones",
+        "tags": [
+          "headphones",
+          "beats",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Beats",
+          "weight": "547g"
+        },
+        "createdAt": "2025-04-01T00:58:50.744Z",
+        "updatedAt": "2025-05-11T04:01:47.841Z"
+      },
+      {
+        "id": "3a447bd9-1b10-40f2-a81b-aa9cab06be8d",
+        "name": "Studio Monitor 4FFF",
+        "slug": "studio-monitor-4fff",
+        "description": "Premium Headphones from Bose. Experience styling and function with the Studio Monitor 4FFF.",
+        "price": 13679,
+        "discountPrice": null,
+        "stock": 65,
+        "images": [
+          "https://images.unsplash.com/photo-1583847268964-b8bd40940452?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Headphones",
+        "tags": [
+          "headphones",
+          "bose",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Bose",
+          "weight": "1067g"
+        },
+        "createdAt": "2025-10-15T04:10:24.597Z",
+        "updatedAt": "2025-12-02T23:19:04.357Z"
+      },
+      {
+        "id": "1e80e119-046f-48d6-ae24-7aa0f0717a2a",
+        "name": "Bass Boosted 34E1",
+        "slug": "bass-boosted-34e1",
+        "description": "Premium Headphones from Bose. Experience styling and function with the Bass Boosted 34E1.",
+        "price": 13621,
+        "discountPrice": 9943,
+        "stock": 183,
+        "images": [
+          "https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Headphones",
+        "tags": [
+          "headphones",
+          "bose",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Bose",
+          "weight": "926g"
+        },
+        "createdAt": "2024-12-30T21:41:48.670Z",
+        "updatedAt": "2025-07-23T03:31:28.007Z"
+      },
+      {
+        "id": "03f01421-baaf-4413-82c9-517f8a5ffc49",
+        "name": "Noise Cancelling 3EFE",
+        "slug": "noise-cancelling-3efe",
+        "description": "Premium Headphones from Bose. Experience styling and function with the Noise Cancelling 3EFE.",
+        "price": 34927,
+        "discountPrice": null,
+        "stock": 158,
+        "images": [
+          "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Headphones",
+        "tags": [
+          "headphones",
+          "bose",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Bose",
+          "weight": "870g"
+        },
+        "createdAt": "2025-01-29T02:21:05.234Z",
+        "updatedAt": "2025-03-18T12:26:25.775Z"
+      },
+      {
+        "id": "a349a00a-5fc4-48ef-a355-eee5d2a5df64",
+        "name": "Noise Cancelling 6563",
+        "slug": "noise-cancelling-6563",
+        "description": "Premium Headphones from Sennheiser. Experience styling and function with the Noise Cancelling 6563.",
+        "price": 9073,
+        "discountPrice": null,
+        "stock": 21,
+        "images": [
+          "https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Headphones",
+        "tags": [
+          "headphones",
+          "sennheiser",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Sennheiser",
+          "weight": "1724g"
+        },
+        "createdAt": "2025-10-15T11:14:01.369Z",
+        "updatedAt": "2025-11-23T17:13:20.045Z"
+      },
+      {
+        "id": "42923c67-16c5-45b5-a741-6ec45e1ec800",
+        "name": "Canvas Loafers 90F5",
+        "slug": "canvas-loafers-90f5",
+        "description": "Premium Shoes from Puma. Experience styling and function with the Canvas Loafers 90F5.",
+        "price": 2060,
+        "discountPrice": null,
+        "stock": 33,
+        "images": [
+          "https://images.unsplash.com/photo-1525966235021-331deae23889?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Shoes",
+        "tags": [
+          "shoes",
+          "puma",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Puma",
+          "weight": "1570g"
+        },
+        "createdAt": "2025-09-02T19:02:25.750Z",
+        "updatedAt": "2025-11-29T05:58:01.274Z"
+      },
+      {
+        "id": "661a5e87-31d6-43e0-8ef8-714fd4323a05",
+        "name": "Sport Trainers C6A6",
+        "slug": "sport-trainers-c6a6",
+        "description": "Premium Shoes from Puma. Experience styling and function with the Sport Trainers C6A6.",
+        "price": 4640,
+        "discountPrice": null,
+        "stock": 15,
+        "images": [
+          "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Shoes",
+        "tags": [
+          "shoes",
+          "puma",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Puma",
+          "weight": "556g"
+        },
+        "createdAt": "2025-10-14T05:10:54.968Z",
+        "updatedAt": "2025-11-15T13:34:04.097Z"
+      },
+      {
+        "id": "fbae2b5d-1486-4971-91dd-237e889c4089",
+        "name": "Running Zoom 140E",
+        "slug": "running-zoom-140e",
+        "description": "Premium Shoes from Adidas. Experience styling and function with the Running Zoom 140E.",
+        "price": 12538,
+        "discountPrice": null,
+        "stock": 54,
+        "images": [
+          "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Shoes",
+        "tags": [
+          "shoes",
+          "adidas",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Adidas",
+          "weight": "564g"
+        },
+        "createdAt": "2025-03-01T19:46:18.648Z",
+        "updatedAt": "2025-09-25T03:34:57.848Z"
+      },
+      {
+        "id": "5486c323-1429-4ce4-b660-1bfe35e58447",
+        "name": "Classic Sneakers 698C",
+        "slug": "classic-sneakers-698c",
+        "description": "Premium Shoes from Nike. Experience styling and function with the Classic Sneakers 698C.",
+        "price": 2137,
+        "discountPrice": null,
+        "stock": 184,
+        "images": [
+          "https://images.unsplash.com/photo-1560769619301-355e8ade3f8e?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Shoes",
+        "tags": [
+          "shoes",
+          "nike",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Nike",
+          "weight": "1271g"
+        },
+        "createdAt": "2024-12-21T09:06:34.818Z",
+        "updatedAt": "2025-03-14T06:15:25.459Z"
+      },
+      {
+        "id": "d08cb418-ebfa-4678-8651-bb9669d00d8c",
+        "name": "High Top Boots 26F3",
+        "slug": "high-top-boots-26f3",
+        "description": "Premium Shoes from Puma. Experience styling and function with the High Top Boots 26F3.",
+        "price": 2377,
+        "discountPrice": 2115,
+        "stock": 31,
+        "images": [
+          "https://images.unsplash.com/photo-1560769619301-355e8ade3f8e?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Shoes",
+        "tags": [
+          "shoes",
+          "puma",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Puma",
+          "weight": "305g"
+        },
+        "createdAt": "2025-04-09T07:08:44.680Z",
+        "updatedAt": "2025-05-11T14:28:31.953Z"
+      },
+      {
+        "id": "f2a05ec3-a809-46b4-8a29-cd4d4a4782e8",
+        "name": "Canvas Loafers 858F",
+        "slug": "canvas-loafers-858f",
+        "description": "Premium Shoes from Nike. Experience styling and function with the Canvas Loafers 858F.",
+        "price": 8091,
+        "discountPrice": null,
+        "stock": 72,
+        "images": [
+          "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Shoes",
+        "tags": [
+          "shoes",
+          "nike",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Nike",
+          "weight": "1178g"
+        },
+        "createdAt": "2025-08-30T17:42:38.001Z",
+        "updatedAt": "2025-11-04T22:33:25.687Z"
+      },
+      {
+        "id": "477757bd-de8f-4679-87c6-236da9a4391d",
+        "name": "Sport Trainers 41AE",
+        "slug": "sport-trainers-41ae",
+        "description": "Premium Shoes from Reebok. Experience styling and function with the Sport Trainers 41AE.",
+        "price": 5489,
+        "discountPrice": null,
+        "stock": 103,
+        "images": [
+          "https://images.unsplash.com/photo-1525966235021-331deae23889?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Shoes",
+        "tags": [
+          "shoes",
+          "reebok",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Reebok",
+          "weight": "1472g"
+        },
+        "createdAt": "2025-10-17T14:11:06.710Z",
+        "updatedAt": "2025-10-19T06:06:52.989Z"
+      },
+      {
+        "id": "7633ef75-1f74-44dc-8285-ba611f1879d2",
+        "name": "Running Zoom B398",
+        "slug": "running-zoom-b398",
+        "description": "Premium Shoes from Adidas. Experience styling and function with the Running Zoom B398.",
+        "price": 8914,
+        "discountPrice": 7576,
+        "stock": 42,
+        "images": [
+          "https://images.unsplash.com/photo-1525966235021-331deae23889?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Shoes",
+        "tags": [
+          "shoes",
+          "adidas",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Adidas",
+          "weight": "463g"
+        },
+        "createdAt": "2025-04-09T00:45:27.343Z",
+        "updatedAt": "2025-09-27T10:55:51.983Z"
+      },
+      {
+        "id": "a7e0ffd7-31c4-4e47-a1fb-75366f73c002",
+        "name": "High Top Boots C037",
+        "slug": "high-top-boots-c037",
+        "description": "Premium Shoes from Vans. Experience styling and function with the High Top Boots C037.",
+        "price": 9552,
+        "discountPrice": null,
+        "stock": 61,
+        "images": [
+          "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Shoes",
+        "tags": [
+          "shoes",
+          "vans",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Vans",
+          "weight": "358g"
+        },
+        "createdAt": "2025-09-09T18:16:20.584Z",
+        "updatedAt": "2025-11-09T11:37:35.683Z"
+      },
+      {
+        "id": "d2b20a4b-e2c2-49a3-a419-5cb4ea14fcd1",
+        "name": "High Top Boots 27EE",
+        "slug": "high-top-boots-27ee",
+        "description": "Premium Shoes from Puma. Experience styling and function with the High Top Boots 27EE.",
+        "price": 4790,
+        "discountPrice": null,
+        "stock": 60,
+        "images": [
+          "https://images.unsplash.com/photo-1560769619301-355e8ade3f8e?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Shoes",
+        "tags": [
+          "shoes",
+          "puma",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Puma",
+          "weight": "1021g"
+        },
+        "createdAt": "2025-08-29T12:45:56.084Z",
+        "updatedAt": "2025-12-01T00:39:25.168Z"
+      }
+    ]
+  },
+  {
+    "batchIndex": 2,
+    "products": [
+      {
+        "id": "edca417d-dc71-4a87-8a93-b9c112e54c5f",
+        "name": "Laptop Sleeve 9570",
+        "slug": "laptop-sleeve-9570",
+        "description": "Premium Bags from Prada. Experience styling and function with the Laptop Sleeve 9570.",
+        "price": 15265,
+        "discountPrice": 13738,
+        "stock": 47,
+        "images": [
+          "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Bags",
+        "tags": [
+          "bags",
+          "prada",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Prada",
+          "weight": "796g"
+        },
+        "createdAt": "2025-07-01T17:02:35.042Z",
+        "updatedAt": "2025-10-15T05:56:55.755Z"
+      },
+      {
+        "id": "afd4ad85-31e6-4568-b279-7cfc8afaea26",
+        "name": "Duffle Bag 7EDA",
+        "slug": "duffle-bag-7eda",
+        "description": "Premium Bags from Samsonite. Experience styling and function with the Duffle Bag 7EDA.",
+        "price": 22535,
+        "discountPrice": 18478,
+        "stock": 139,
+        "images": [
+          "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Bags",
+        "tags": [
+          "bags",
+          "samsonite",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Samsonite",
+          "weight": "1912g"
+        },
+        "createdAt": "2025-03-11T08:26:18.633Z",
+        "updatedAt": "2025-05-06T10:23:21.677Z"
+      },
+      {
+        "id": "b0a96cbc-69e9-4fff-b580-cca2048347bc",
+        "name": "Duffle Bag F385",
+        "slug": "duffle-bag-f385",
+        "description": "Premium Bags from Prada. Experience styling and function with the Duffle Bag F385.",
+        "price": 17501,
+        "discountPrice": null,
+        "stock": 52,
+        "images": [
+          "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Bags",
+        "tags": [
+          "bags",
+          "prada",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Prada",
+          "weight": "1235g"
+        },
+        "createdAt": "2025-05-18T08:19:03.846Z",
+        "updatedAt": "2025-09-09T00:38:53.982Z"
+      },
+      {
+        "id": "bde003ec-ef44-4882-ba8a-eb684ce945c5",
+        "name": "Leather Tote 3D24",
+        "slug": "leather-tote-3d24",
+        "description": "Premium Bags from Gucci. Experience styling and function with the Leather Tote 3D24.",
+        "price": 23587,
+        "discountPrice": null,
+        "stock": 119,
+        "images": [
+          "https://images.unsplash.com/photo-1491637639811-60e2756cc1c9?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Bags",
+        "tags": [
+          "bags",
+          "gucci",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Gucci",
+          "weight": "584g"
+        },
+        "createdAt": "2025-09-07T09:09:40.920Z",
+        "updatedAt": "2025-09-21T08:02:08.079Z"
+      },
+      {
+        "id": "b1b19e70-cdb9-4919-bed8-5ff096ef978e",
+        "name": "Duffle Bag B8BF",
+        "slug": "duffle-bag-b8bf",
+        "description": "Premium Bags from Samsonite. Experience styling and function with the Duffle Bag B8BF.",
+        "price": 5229,
+        "discountPrice": null,
+        "stock": 176,
+        "images": [
+          "https://images.unsplash.com/photo-1564812160934-8b63e6396e95?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Bags",
+        "tags": [
+          "bags",
+          "samsonite",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Samsonite",
+          "weight": "1103g"
+        },
+        "createdAt": "2025-12-06T09:00:00.930Z",
+        "updatedAt": "2025-12-08T06:50:11.400Z"
+      },
+      {
+        "id": "87da570e-2d2d-4744-9e9f-865ae38bc1d4",
+        "name": "Duffle Bag 59C4",
+        "slug": "duffle-bag-59c4",
+        "description": "Premium Bags from American Tourister. Experience styling and function with the Duffle Bag 59C4.",
+        "price": 9770,
+        "discountPrice": null,
+        "stock": 72,
+        "images": [
+          "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Bags",
+        "tags": [
+          "bags",
+          "american tourister",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "American Tourister",
+          "weight": "1446g"
+        },
+        "createdAt": "2024-12-30T19:40:09.637Z",
+        "updatedAt": "2025-01-26T05:48:23.541Z"
+      },
+      {
+        "id": "4e7693c3-41ae-4eed-94c5-48c2c1b76b49",
+        "name": "Laptop Sleeve 34A2",
+        "slug": "laptop-sleeve-34a2",
+        "description": "Premium Bags from American Tourister. Experience styling and function with the Laptop Sleeve 34A2.",
+        "price": 18449,
+        "discountPrice": null,
+        "stock": 49,
+        "images": [
+          "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Bags",
+        "tags": [
+          "bags",
+          "american tourister",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "American Tourister",
+          "weight": "1114g"
+        },
+        "createdAt": "2025-05-17T22:06:19.164Z",
+        "updatedAt": "2025-05-22T00:38:35.862Z"
+      },
+      {
+        "id": "001cd4b3-9f55-4d58-91e9-cb2f2e67cdc4",
+        "name": "Laptop Sleeve 482C",
+        "slug": "laptop-sleeve-482c",
+        "description": "Premium Bags from Samsonite. Experience styling and function with the Laptop Sleeve 482C.",
+        "price": 19906,
+        "discountPrice": 15526,
+        "stock": 186,
+        "images": [
+          "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Bags",
+        "tags": [
+          "bags",
+          "samsonite",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Samsonite",
+          "weight": "936g"
+        },
+        "createdAt": "2025-09-02T19:10:46.248Z",
+        "updatedAt": "2025-11-04T21:08:52.271Z"
+      },
+      {
+        "id": "e273291b-ce3e-4164-aea6-c681ca3b960a",
+        "name": "Laptop Sleeve 1124",
+        "slug": "laptop-sleeve-1124",
+        "description": "Premium Bags from American Tourister. Experience styling and function with the Laptop Sleeve 1124.",
+        "price": 16300,
+        "discountPrice": null,
+        "stock": 135,
+        "images": [
+          "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Bags",
+        "tags": [
+          "bags",
+          "american tourister",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "American Tourister",
+          "weight": "560g"
+        },
+        "createdAt": "2025-07-08T02:44:21.733Z",
+        "updatedAt": "2025-08-09T15:16:39.304Z"
+      },
+      {
+        "id": "46331db0-0a5c-4950-ac86-26a18e1653ef",
+        "name": "Leather Tote 54B2",
+        "slug": "leather-tote-54b2",
+        "description": "Premium Bags from Prada. Experience styling and function with the Leather Tote 54B2.",
+        "price": 17497,
+        "discountPrice": null,
+        "stock": 36,
+        "images": [
+          "https://images.unsplash.com/photo-1590874103328-37813c9805e5?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Bags",
+        "tags": [
+          "bags",
+          "prada",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Prada",
+          "weight": "1363g"
+        },
+        "createdAt": "2025-05-05T11:08:37.591Z",
+        "updatedAt": "2025-05-20T23:15:37.399Z"
+      },
+      {
+        "id": "0c6872ca-bd96-4fc5-92ec-513f0d531338",
+        "name": "Minimalist Gold 8A02",
+        "slug": "minimalist-gold-8a02",
+        "description": "Premium Watches from Omega. Experience styling and function with the Minimalist Gold 8A02.",
+        "price": 59958,
+        "discountPrice": 46767,
+        "stock": 100,
+        "images": [
+          "https://images.unsplash.com/photo-1542496658-e33a6d0d50e6?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Watches",
+        "tags": [
+          "watches",
+          "omega",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Omega",
+          "weight": "627g"
+        },
+        "createdAt": "2025-09-23T23:56:13.772Z",
+        "updatedAt": "2025-10-20T08:45:51.899Z"
+      },
+      {
+        "id": "47ef149f-2f63-4885-a51a-57f05c28aa21",
+        "name": "Hiking Rucksack C131",
+        "slug": "hiking-rucksack-c131",
+        "description": "Premium Bags from Prada. Experience styling and function with the Hiking Rucksack C131.",
+        "price": 7823,
+        "discountPrice": 5867,
+        "stock": 25,
+        "images": [
+          "https://images.unsplash.com/photo-1491637639811-60e2756cc1c9?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Bags",
+        "tags": [
+          "bags",
+          "prada",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Prada",
+          "weight": "183g"
+        },
+        "createdAt": "2025-08-09T13:45:22.919Z",
+        "updatedAt": "2025-09-28T12:02:37.892Z"
+      },
+      {
+        "id": "a3c90ea8-1026-4961-9fe8-45e26100cdcc",
+        "name": "Galaxy S22 5134",
+        "slug": "galaxy-s22-5134",
+        "description": "Premium Mobiles from Apple. Experience styling and function with the Galaxy S22 5134.",
+        "price": 121229,
+        "discountPrice": 98195,
+        "stock": 70,
+        "images": [
+          "https://images.unsplash.com/photo-1573148195900-7845dcb9d127?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Mobiles",
+        "tags": [
+          "mobiles",
+          "apple",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Apple",
+          "weight": "1448g"
+        },
+        "createdAt": "2025-02-03T14:57:46.124Z",
+        "updatedAt": "2025-03-07T03:38:35.812Z"
+      },
+      {
+        "id": "b925adbc-1a1b-4631-a0d8-ac9bfe6d0095",
+        "name": "Classic Analog F8E1",
+        "slug": "classic-analog-f8e1",
+        "description": "Premium Watches from Titan. Experience styling and function with the Classic Analog F8E1.",
+        "price": 123312,
+        "discountPrice": null,
+        "stock": 198,
+        "images": [
+          "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Watches",
+        "tags": [
+          "watches",
+          "titan",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Titan",
+          "weight": "1258g"
+        },
+        "createdAt": "2025-05-20T17:41:45.830Z",
+        "updatedAt": "2025-10-18T19:09:23.968Z"
+      },
+      {
+        "id": "7733d076-3b2a-4eba-bc56-375d22a80946",
+        "name": "Sport Trainers FA5B",
+        "slug": "sport-trainers-fa5b",
+        "description": "Premium Shoes from Vans. Experience styling and function with the Sport Trainers FA5B.",
+        "price": 10411,
+        "discountPrice": null,
+        "stock": 60,
+        "images": [
+          "https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Shoes",
+        "tags": [
+          "shoes",
+          "vans",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Vans",
+          "weight": "1189g"
+        },
+        "createdAt": "2025-04-20T08:28:51.752Z",
+        "updatedAt": "2025-10-18T11:01:23.107Z"
+      },
+      {
+        "id": "ef9738cc-9171-4a0f-8786-26f58816a66d",
+        "name": "Laptop Sleeve C7D3",
+        "slug": "laptop-sleeve-c7d3",
+        "description": "Premium Bags from Wildcraft. Experience styling and function with the Laptop Sleeve C7D3.",
+        "price": 9905,
+        "discountPrice": null,
+        "stock": 137,
+        "images": [
+          "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Bags",
+        "tags": [
+          "bags",
+          "wildcraft",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Wildcraft",
+          "weight": "943g"
+        },
+        "createdAt": "2025-06-03T12:26:49.517Z",
+        "updatedAt": "2025-08-24T21:20:50.005Z"
+      },
+      {
+        "id": "3ba0ad5a-f4ca-4631-aa7a-bd713f68cfda",
+        "name": "Vintage Leather 9975",
+        "slug": "vintage-leather-9975",
+        "description": "Premium Watches from Rolex. Experience styling and function with the Vintage Leather 9975.",
+        "price": 137343,
+        "discountPrice": null,
+        "stock": 22,
+        "images": [
+          "https://images.unsplash.com/photo-1542496658-e33a6d0d50e6?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Watches",
+        "tags": [
+          "watches",
+          "rolex",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Rolex",
+          "weight": "1168g"
+        },
+        "createdAt": "2025-05-29T13:41:29.292Z",
+        "updatedAt": "2025-10-01T14:01:37.456Z"
+      },
+      {
+        "id": "e39eb5c1-1b35-4e49-a745-86c55d9d6689",
+        "name": "Leather Tote DB3F",
+        "slug": "leather-tote-db3f",
+        "description": "Premium Bags from Samsonite. Experience styling and function with the Leather Tote DB3F.",
+        "price": 5306,
+        "discountPrice": null,
+        "stock": 188,
+        "images": [
+          "https://images.unsplash.com/photo-1491637639811-60e2756cc1c9?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Bags",
+        "tags": [
+          "bags",
+          "samsonite",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Samsonite",
+          "weight": "836g"
+        },
+        "createdAt": "2025-08-24T19:24:57.964Z",
+        "updatedAt": "2025-10-17T20:51:25.065Z"
+      },
+      {
+        "id": "f7c6dcb8-e322-471e-8e8a-11a774e3bffe",
+        "name": "Running Zoom 6884",
+        "slug": "running-zoom-6884",
+        "description": "Premium Shoes from Adidas. Experience styling and function with the Running Zoom 6884.",
+        "price": 4656,
+        "discountPrice": null,
+        "stock": 56,
+        "images": [
+          "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Shoes",
+        "tags": [
+          "shoes",
+          "adidas",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Adidas",
+          "weight": "1943g"
+        },
+        "createdAt": "2025-05-06T18:30:01.087Z",
+        "updatedAt": "2025-11-18T15:03:00.722Z"
+      },
+      {
+        "id": "5191aff7-dc8d-4c32-8756-c794bebbbbc7",
+        "name": "Galaxy S22 58AC",
+        "slug": "galaxy-s22-58ac",
+        "description": "Premium Mobiles from OnePlus. Experience styling and function with the Galaxy S22 58AC.",
+        "price": 147593,
+        "discountPrice": null,
+        "stock": 137,
+        "images": [
+          "https://images.unsplash.com/photo-1511707171634-61677c473f27?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Mobiles",
+        "tags": [
+          "mobiles",
+          "oneplus",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "OnePlus",
+          "weight": "1411g"
+        },
+        "createdAt": "2025-08-11T19:05:39.344Z",
+        "updatedAt": "2025-09-03T03:39:38.970Z"
+      },
+      {
+        "id": "8ea177aa-8813-429d-a537-8f969282da3d",
+        "name": "Travel Backpack CFF1",
+        "slug": "travel-backpack-cff1",
+        "description": "Premium Bags from Samsonite. Experience styling and function with the Travel Backpack CFF1.",
+        "price": 8905,
+        "discountPrice": 6411,
+        "stock": 137,
+        "images": [
+          "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Bags",
+        "tags": [
+          "bags",
+          "samsonite",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Samsonite",
+          "weight": "754g"
+        },
+        "createdAt": "2025-05-15T00:03:32.658Z",
+        "updatedAt": "2025-06-18T08:55:58.198Z"
+      },
+      {
+        "id": "fb8910fa-a692-4ee5-93d2-44e77de1300e",
+        "name": "Classic Sneakers 785B",
+        "slug": "classic-sneakers-785b",
+        "description": "Premium Shoes from Adidas. Experience styling and function with the Classic Sneakers 785B.",
+        "price": 5867,
+        "discountPrice": null,
+        "stock": 37,
+        "images": [
+          "https://images.unsplash.com/photo-1560769619301-355e8ade3f8e?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Shoes",
+        "tags": [
+          "shoes",
+          "adidas",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Adidas",
+          "weight": "948g"
+        },
+        "createdAt": "2025-03-30T18:49:08.274Z",
+        "updatedAt": "2025-04-26T12:06:52.373Z"
+      },
+      {
+        "id": "7bad76ef-8dfe-4c65-a53a-b36613cd1998",
+        "name": "Leather Tote 5729",
+        "slug": "leather-tote-5729",
+        "description": "Premium Bags from Wildcraft. Experience styling and function with the Leather Tote 5729.",
+        "price": 7804,
+        "discountPrice": 6243,
+        "stock": 187,
+        "images": [
+          "https://images.unsplash.com/photo-1590874103328-37813c9805e5?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Bags",
+        "tags": [
+          "bags",
+          "wildcraft",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Wildcraft",
+          "weight": "843g"
+        },
+        "createdAt": "2025-08-10T06:27:06.364Z",
+        "updatedAt": "2025-12-03T06:05:14.277Z"
+      },
+      {
+        "id": "6cc08b5c-3ece-430c-95bd-10755a7b0f80",
+        "name": "Bass Boosted 7A79",
+        "slug": "bass-boosted-7a79",
+        "description": "Premium Headphones from Beats. Experience styling and function with the Bass Boosted 7A79.",
+        "price": 20614,
+        "discountPrice": 16903,
+        "stock": 193,
+        "images": [
+          "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Headphones",
+        "tags": [
+          "headphones",
+          "beats",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Beats",
+          "weight": "1250g"
+        },
+        "createdAt": "2025-09-25T21:43:58.927Z",
+        "updatedAt": "2025-11-02T18:27:43.522Z"
+      },
+      {
+        "id": "4cc683ef-73b8-4497-a5e3-1176d6545658",
+        "name": "Galaxy S22 A196",
+        "slug": "galaxy-s22-a196",
+        "description": "Premium Mobiles from Google. Experience styling and function with the Galaxy S22 A196.",
+        "price": 114826,
+        "discountPrice": null,
+        "stock": 90,
+        "images": [
+          "https://images.unsplash.com/photo-1592899677789-da412752dd3d?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Mobiles",
+        "tags": [
+          "mobiles",
+          "google",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Google",
+          "weight": "291g"
+        },
+        "createdAt": "2025-05-17T18:43:43.435Z",
+        "updatedAt": "2025-07-19T16:36:00.463Z"
+      },
+      {
+        "id": "400194c8-628b-4d53-b131-3569680698bf",
+        "name": "Running Zoom 9F95",
+        "slug": "running-zoom-9f95",
+        "description": "Premium Shoes from Nike. Experience styling and function with the Running Zoom 9F95.",
+        "price": 11273,
+        "discountPrice": null,
+        "stock": 83,
+        "images": [
+          "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Shoes",
+        "tags": [
+          "shoes",
+          "nike",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Nike",
+          "weight": "476g"
+        },
+        "createdAt": "2025-01-12T15:50:53.695Z",
+        "updatedAt": "2025-05-27T10:27:50.442Z"
+      },
+      {
+        "id": "9c28ee20-0f5b-4cf7-95a3-f73da52ab228",
+        "name": "Duffle Bag A779",
+        "slug": "duffle-bag-a779",
+        "description": "Premium Bags from American Tourister. Experience styling and function with the Duffle Bag A779.",
+        "price": 22713,
+        "discountPrice": null,
+        "stock": 21,
+        "images": [
+          "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Bags",
+        "tags": [
+          "bags",
+          "american tourister",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "American Tourister",
+          "weight": "1310g"
+        },
+        "createdAt": "2025-06-10T05:57:16.885Z",
+        "updatedAt": "2025-10-29T08:24:33.569Z"
+      },
+      {
+        "id": "d1a8a772-65b2-4f1f-931b-c8cbe8a483e0",
+        "name": "Redmi Note FC43",
+        "slug": "redmi-note-fc43",
+        "description": "Premium Mobiles from Apple. Experience styling and function with the Redmi Note FC43.",
+        "price": 37750,
+        "discountPrice": 32087,
+        "stock": 18,
+        "images": [
+          "https://images.unsplash.com/photo-1592899677789-da412752dd3d?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Mobiles",
+        "tags": [
+          "mobiles",
+          "apple",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Apple",
+          "weight": "1943g"
+        },
+        "createdAt": "2025-10-22T17:38:21.775Z",
+        "updatedAt": "2025-11-01T12:04:39.781Z"
+      },
+      {
+        "id": "6e04b0c6-4ce7-48d9-8439-59210f796c85",
+        "name": "Duffle Bag 142F",
+        "slug": "duffle-bag-142f",
+        "description": "Premium Bags from American Tourister. Experience styling and function with the Duffle Bag 142F.",
+        "price": 3957,
+        "discountPrice": 3521,
+        "stock": 181,
+        "images": [
+          "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Bags",
+        "tags": [
+          "bags",
+          "american tourister",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "American Tourister",
+          "weight": "1949g"
+        },
+        "createdAt": "2025-01-08T20:10:20.244Z",
+        "updatedAt": "2025-04-01T22:54:20.325Z"
+      },
+      {
+        "id": "86dea7a6-e462-42df-a85e-6fbc932e2cd9",
+        "name": "Classic Analog E110",
+        "slug": "classic-analog-e110",
+        "description": "Premium Watches from Casio. Experience styling and function with the Classic Analog E110.",
+        "price": 70896,
+        "discountPrice": null,
+        "stock": 63,
+        "images": [
+          "https://images.unsplash.com/photo-1522312346375-d1a52e208932?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Watches",
+        "tags": [
+          "watches",
+          "casio",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Casio",
+          "weight": "1960g"
+        },
+        "createdAt": "2025-05-25T00:37:34.396Z",
+        "updatedAt": "2025-09-07T19:57:00.842Z"
+      },
+      {
+        "id": "1b5dc76c-184c-4d27-b901-c3d34e5a1423",
+        "name": "Travel Backpack A3EB",
+        "slug": "travel-backpack-a3eb",
+        "description": "Premium Bags from Prada. Experience styling and function with the Travel Backpack A3EB.",
+        "price": 2502,
+        "discountPrice": 2026,
+        "stock": 97,
+        "images": [
+          "https://images.unsplash.com/photo-1564812160934-8b63e6396e95?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Bags",
+        "tags": [
+          "bags",
+          "prada",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Prada",
+          "weight": "1184g"
+        },
+        "createdAt": "2024-12-15T10:12:08.548Z",
+        "updatedAt": "2025-03-07T03:29:27.225Z"
+      },
+      {
+        "id": "db8d4a75-6830-4a74-a134-31fac377d016",
+        "name": "Canvas Loafers B665",
+        "slug": "canvas-loafers-b665",
+        "description": "Premium Shoes from Vans. Experience styling and function with the Canvas Loafers B665.",
+        "price": 1575,
+        "discountPrice": null,
+        "stock": 130,
+        "images": [
+          "https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Shoes",
+        "tags": [
+          "shoes",
+          "vans",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Vans",
+          "weight": "189g"
+        },
+        "createdAt": "2025-08-03T05:36:38.292Z",
+        "updatedAt": "2025-08-16T12:24:05.439Z"
+      },
+      {
+        "id": "41775b7e-a486-47e1-bb00-d8fbba07e076",
+        "name": "iPhone 14 8365",
+        "slug": "iphone-14-8365",
+        "description": "Premium Mobiles from Samsung. Experience styling and function with the iPhone 14 8365.",
+        "price": 14223,
+        "discountPrice": null,
+        "stock": 66,
+        "images": [
+          "https://images.unsplash.com/photo-1592899677789-da412752dd3d?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Mobiles",
+        "tags": [
+          "mobiles",
+          "samsung",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Samsung",
+          "weight": "1939g"
+        },
+        "createdAt": "2025-07-21T00:25:19.562Z",
+        "updatedAt": "2025-11-02T14:55:13.094Z"
+      },
+      {
+        "id": "e064cd88-2c03-44d8-ab50-dc249694fc10",
+        "name": "MacBook Air C43A",
+        "slug": "macbook-air-c43a",
+        "description": "Premium Laptops from Lenovo. Experience styling and function with the MacBook Air C43A.",
+        "price": 46699,
+        "discountPrice": null,
+        "stock": 190,
+        "images": [
+          "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Laptops",
+        "tags": [
+          "laptops",
+          "lenovo",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Lenovo",
+          "weight": "938g"
+        },
+        "createdAt": "2025-04-20T17:02:50.702Z",
+        "updatedAt": "2025-05-28T02:55:23.445Z"
+      },
+      {
+        "id": "e36f4e09-4723-432b-816d-17ffcf3198ca",
+        "name": "Sport Trainers 9B89",
+        "slug": "sport-trainers-9b89",
+        "description": "Premium Shoes from Reebok. Experience styling and function with the Sport Trainers 9B89.",
+        "price": 12898,
+        "discountPrice": null,
+        "stock": 40,
+        "images": [
+          "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Shoes",
+        "tags": [
+          "shoes",
+          "reebok",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Reebok",
+          "weight": "1940g"
+        },
+        "createdAt": "2025-06-06T16:34:53.360Z",
+        "updatedAt": "2025-11-04T07:44:56.956Z"
+      },
+      {
+        "id": "d30d3224-3de1-4c92-90b1-cc53789a8731",
+        "name": "Minimalist Gold 0BF2",
+        "slug": "minimalist-gold-0bf2",
+        "description": "Premium Watches from Titan. Experience styling and function with the Minimalist Gold 0BF2.",
+        "price": 68064,
+        "discountPrice": null,
+        "stock": 36,
+        "images": [
+          "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Watches",
+        "tags": [
+          "watches",
+          "titan",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Titan",
+          "weight": "593g"
+        },
+        "createdAt": "2025-11-08T12:20:28.174Z",
+        "updatedAt": "2025-11-27T19:57:56.800Z"
+      },
+      {
+        "id": "94f6380b-1983-4fc1-b1ae-eb97d376d196",
+        "name": "Laptop Sleeve D93F",
+        "slug": "laptop-sleeve-d93f",
+        "description": "Premium Bags from Gucci. Experience styling and function with the Laptop Sleeve D93F.",
+        "price": 13693,
+        "discountPrice": 9858,
+        "stock": 68,
+        "images": [
+          "https://images.unsplash.com/photo-1491637639811-60e2756cc1c9?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Bags",
+        "tags": [
+          "bags",
+          "gucci",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Gucci",
+          "weight": "987g"
+        },
+        "createdAt": "2025-09-26T18:20:04.091Z",
+        "updatedAt": "2025-10-26T17:41:57.951Z"
+      },
+      {
+        "id": "e75cd232-0d59-4374-9510-c27dfaefc14c",
+        "name": "In-Ear Buds 2F95",
+        "slug": "in-ear-buds-2f95",
+        "description": "Premium Headphones from Beats. Experience styling and function with the In-Ear Buds 2F95.",
+        "price": 34664,
+        "discountPrice": null,
+        "stock": 31,
+        "images": [
+          "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Headphones",
+        "tags": [
+          "headphones",
+          "beats",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Beats",
+          "weight": "1175g"
+        },
+        "createdAt": "2025-10-26T08:09:48.477Z",
+        "updatedAt": "2025-11-19T14:56:45.386Z"
+      },
+      {
+        "id": "920d9de4-dc49-4d23-8d96-5d7a6a01b133",
+        "name": "Digital Smart EBD9",
+        "slug": "digital-smart-ebd9",
+        "description": "Premium Watches from Fossil. Experience styling and function with the Digital Smart EBD9.",
+        "price": 16184,
+        "discountPrice": 12623,
+        "stock": 45,
+        "images": [
+          "https://images.unsplash.com/photo-1526045612212-70fadcd9c94d?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Watches",
+        "tags": [
+          "watches",
+          "fossil",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Fossil",
+          "weight": "1588g"
+        },
+        "createdAt": "2025-06-14T10:23:20.219Z",
+        "updatedAt": "2025-10-15T01:42:08.453Z"
+      },
+      {
+        "id": "37a10d08-9fbf-4ee0-8bc7-d582582f65f4",
+        "name": "In-Ear Buds 4CD4",
+        "slug": "in-ear-buds-4cd4",
+        "description": "Premium Headphones from JBL. Experience styling and function with the In-Ear Buds 4CD4.",
+        "price": 22837,
+        "discountPrice": null,
+        "stock": 70,
+        "images": [
+          "https://images.unsplash.com/photo-1546435770-a3e2feadf723?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Headphones",
+        "tags": [
+          "headphones",
+          "jbl",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "JBL",
+          "weight": "782g"
+        },
+        "createdAt": "2025-09-09T05:14:38.866Z",
+        "updatedAt": "2025-09-14T13:37:32.760Z"
+      },
+      {
+        "id": "22153fda-82fe-451d-a7cb-9ef943b7c9c6",
+        "name": "Duffle Bag ADAF",
+        "slug": "duffle-bag-adaf",
+        "description": "Premium Bags from Gucci. Experience styling and function with the Duffle Bag ADAF.",
+        "price": 10734,
+        "discountPrice": null,
+        "stock": 196,
+        "images": [
+          "https://images.unsplash.com/photo-1491637639811-60e2756cc1c9?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Bags",
+        "tags": [
+          "bags",
+          "gucci",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Gucci",
+          "weight": "587g"
+        },
+        "createdAt": "2025-02-09T16:48:25.236Z",
+        "updatedAt": "2025-02-12T09:22:37.860Z"
+      },
+      {
+        "id": "b9062812-e132-4aaa-bf05-378e0f93026c",
+        "name": "Classic Analog 3072",
+        "slug": "classic-analog-3072",
+        "description": "Premium Watches from Titan. Experience styling and function with the Classic Analog 3072.",
+        "price": 10955,
+        "discountPrice": 7997,
+        "stock": 129,
+        "images": [
+          "https://images.unsplash.com/photo-1542496658-e33a6d0d50e6?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Watches",
+        "tags": [
+          "watches",
+          "titan",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Titan",
+          "weight": "1525g"
+        },
+        "createdAt": "2025-03-30T17:53:36.926Z",
+        "updatedAt": "2025-08-19T04:18:45.847Z"
+      },
+      {
+        "id": "8e093b51-1565-4060-a42d-7931912db2f0",
+        "name": "Pixel 7 AE93",
+        "slug": "pixel-7-ae93",
+        "description": "Premium Mobiles from Samsung. Experience styling and function with the Pixel 7 AE93.",
+        "price": 27893,
+        "discountPrice": 25103,
+        "stock": 106,
+        "images": [
+          "https://images.unsplash.com/photo-1511707171634-61677c473f27?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Mobiles",
+        "tags": [
+          "mobiles",
+          "samsung",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Samsung",
+          "weight": "875g"
+        },
+        "createdAt": "2025-04-01T17:59:21.519Z",
+        "updatedAt": "2025-05-14T08:31:56.127Z"
+      },
+      {
+        "id": "e651b825-5293-444d-8c33-a6643d3e2441",
+        "name": "Duffle Bag BBCE",
+        "slug": "duffle-bag-bbce",
+        "description": "Premium Bags from Prada. Experience styling and function with the Duffle Bag BBCE.",
+        "price": 12687,
+        "discountPrice": null,
+        "stock": 82,
+        "images": [
+          "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Bags",
+        "tags": [
+          "bags",
+          "prada",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Prada",
+          "weight": "894g"
+        },
+        "createdAt": "2025-04-10T00:37:12.993Z",
+        "updatedAt": "2025-07-29T22:49:20.445Z"
+      },
+      {
+        "id": "2f8165a2-c132-4897-bed6-034a83535d76",
+        "name": "Noise Cancelling 1AE8",
+        "slug": "noise-cancelling-1ae8",
+        "description": "Premium Headphones from JBL. Experience styling and function with the Noise Cancelling 1AE8.",
+        "price": 10043,
+        "discountPrice": null,
+        "stock": 94,
+        "images": [
+          "https://images.unsplash.com/photo-1546435770-a3e2feadf723?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Headphones",
+        "tags": [
+          "headphones",
+          "jbl",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "JBL",
+          "weight": "1829g"
+        },
+        "createdAt": "2025-06-24T00:41:36.286Z",
+        "updatedAt": "2025-07-12T06:40:59.194Z"
+      },
+      {
+        "id": "4eccd775-24b8-4df3-8e2b-4db66a1d7521",
+        "name": "MacBook Air 2F80",
+        "slug": "macbook-air-2f80",
+        "description": "Premium Laptops from Lenovo. Experience styling and function with the MacBook Air 2F80.",
+        "price": 187502,
+        "discountPrice": 151876,
+        "stock": 35,
+        "images": [
+          "https://images.unsplash.com/photo-1517336714731-489689fd1ca4?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Laptops",
+        "tags": [
+          "laptops",
+          "lenovo",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Lenovo",
+          "weight": "918g"
+        },
+        "createdAt": "2025-10-22T07:17:59.959Z",
+        "updatedAt": "2025-11-21T00:24:57.496Z"
+      },
+      {
+        "id": "b6d7a5a1-389e-4d71-ba38-4fba3ff895ae",
+        "name": "iPhone 14 BCBC",
+        "slug": "iphone-14-bcbc",
+        "description": "Premium Mobiles from Apple. Experience styling and function with the iPhone 14 BCBC.",
+        "price": 67547,
+        "discountPrice": null,
+        "stock": 59,
+        "images": [
+          "https://images.unsplash.com/photo-1573148195900-7845dcb9d127?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Mobiles",
+        "tags": [
+          "mobiles",
+          "apple",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Apple",
+          "weight": "1271g"
+        },
+        "createdAt": "2025-09-11T07:36:49.343Z",
+        "updatedAt": "2025-10-18T10:48:19.029Z"
+      },
+      {
+        "id": "7cc120c0-4b6f-4ed5-ac19-245e762df7d6",
+        "name": "Bass Boosted 555D",
+        "slug": "bass-boosted-555d",
+        "description": "Premium Headphones from Bose. Experience styling and function with the Bass Boosted 555D.",
+        "price": 22517,
+        "discountPrice": 17338,
+        "stock": 186,
+        "images": [
+          "https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Headphones",
+        "tags": [
+          "headphones",
+          "bose",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Bose",
+          "weight": "850g"
+        },
+        "createdAt": "2025-01-22T02:03:09.195Z",
+        "updatedAt": "2025-03-26T14:34:57.293Z"
+      },
+      {
+        "id": "da265615-ed8f-4d1a-bc56-23966d771fd4",
+        "name": "iPhone 14 5348",
+        "slug": "iphone-14-5348",
+        "description": "Premium Mobiles from Xiaomi. Experience styling and function with the iPhone 14 5348.",
+        "price": 114361,
+        "discountPrice": null,
+        "stock": 119,
+        "images": [
+          "https://images.unsplash.com/photo-1573148195900-7845dcb9d127?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Mobiles",
+        "tags": [
+          "mobiles",
+          "xiaomi",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Xiaomi",
+          "weight": "940g"
+        },
+        "createdAt": "2025-03-06T17:44:14.684Z",
+        "updatedAt": "2025-09-14T06:05:06.567Z"
+      },
+      {
+        "id": "4cc36fab-61fd-414a-879c-dc0231ceb466",
+        "name": "ThinkPad X1 9DCE",
+        "slug": "thinkpad-x1-9dce",
+        "description": "Premium Laptops from Apple. Experience styling and function with the ThinkPad X1 9DCE.",
+        "price": 34859,
+        "discountPrice": 27538,
+        "stock": 13,
+        "images": [
+          "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Laptops",
+        "tags": [
+          "laptops",
+          "apple",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Apple",
+          "weight": "275g"
+        },
+        "createdAt": "2025-09-27T15:53:20.379Z",
+        "updatedAt": "2025-10-08T23:16:48.788Z"
+      }
+    ]
+  },
+  {
+    "batchIndex": 3,
+    "products": [
+      {
+        "id": "11de6980-d497-42a3-8b35-da431dd499b4",
+        "name": "Hiking Rucksack 0A49",
+        "slug": "hiking-rucksack-0a49",
+        "description": "Premium Bags from Gucci. Experience styling and function with the Hiking Rucksack 0A49.",
+        "price": 20081,
+        "discountPrice": null,
+        "stock": 118,
+        "images": [
+          "https://images.unsplash.com/photo-1491637639811-60e2756cc1c9?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Bags",
+        "tags": [
+          "bags",
+          "gucci",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Gucci",
+          "weight": "1602g"
+        },
+        "createdAt": "2025-11-09T08:42:29.262Z",
+        "updatedAt": "2025-11-21T19:54:23.393Z"
+      },
+      {
+        "id": "13f2e099-1fcb-4fcd-8d8c-f7b096e72b9b",
+        "name": "Running Zoom 63A5",
+        "slug": "running-zoom-63a5",
+        "description": "Premium Shoes from Reebok. Experience styling and function with the Running Zoom 63A5.",
+        "price": 6509,
+        "discountPrice": null,
+        "stock": 140,
+        "images": [
+          "https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Shoes",
+        "tags": [
+          "shoes",
+          "reebok",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Reebok",
+          "weight": "560g"
+        },
+        "createdAt": "2024-12-19T12:58:23.780Z",
+        "updatedAt": "2024-12-31T11:35:43.913Z"
+      },
+      {
+        "id": "dc877dc2-87ef-4414-a76a-720868f67777",
+        "name": "Leather Tote 4EA2",
+        "slug": "leather-tote-4ea2",
+        "description": "Premium Bags from Prada. Experience styling and function with the Leather Tote 4EA2.",
+        "price": 22805,
+        "discountPrice": null,
+        "stock": 195,
+        "images": [
+          "https://images.unsplash.com/photo-1491637639811-60e2756cc1c9?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Bags",
+        "tags": [
+          "bags",
+          "prada",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Prada",
+          "weight": "529g"
+        },
+        "createdAt": "2025-02-16T14:58:10.147Z",
+        "updatedAt": "2025-06-01T09:36:42.456Z"
+      },
+      {
+        "id": "26ce6d92-b0eb-4aed-9a45-525e46becba6",
+        "name": "ThinkPad X1 504F",
+        "slug": "thinkpad-x1-504f",
+        "description": "Premium Laptops from HP. Experience styling and function with the ThinkPad X1 504F.",
+        "price": 188447,
+        "discountPrice": null,
+        "stock": 66,
+        "images": [
+          "https://images.unsplash.com/photo-1517336714731-489689fd1ca4?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Laptops",
+        "tags": [
+          "laptops",
+          "hp",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "HP",
+          "weight": "956g"
+        },
+        "createdAt": "2024-12-10T22:13:57.252Z",
+        "updatedAt": "2025-02-04T01:42:38.893Z"
+      },
+      {
+        "id": "dbd4b258-c6bf-42da-8563-a8438655a65f",
+        "name": "Chronograph Pro 152F",
+        "slug": "chronograph-pro-152f",
+        "description": "Premium Watches from Seiko. Experience styling and function with the Chronograph Pro 152F.",
+        "price": 148220,
+        "discountPrice": null,
+        "stock": 144,
+        "images": [
+          "https://images.unsplash.com/photo-1539874754764-5a96559165b0?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Watches",
+        "tags": [
+          "watches",
+          "seiko",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Seiko",
+          "weight": "1756g"
+        },
+        "createdAt": "2025-03-22T12:41:56.773Z",
+        "updatedAt": "2025-04-16T00:37:28.274Z"
+      },
+      {
+        "id": "af3b2ce4-cd8b-412a-b08f-cdd95fc476a2",
+        "name": "Noise Cancelling 3C73",
+        "slug": "noise-cancelling-3c73",
+        "description": "Premium Headphones from Bose. Experience styling and function with the Noise Cancelling 3C73.",
+        "price": 5410,
+        "discountPrice": 4111,
+        "stock": 132,
+        "images": [
+          "https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Headphones",
+        "tags": [
+          "headphones",
+          "bose",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Bose",
+          "weight": "1682g"
+        },
+        "createdAt": "2025-07-25T18:11:55.985Z",
+        "updatedAt": "2025-09-04T11:59:20.818Z"
+      },
+      {
+        "id": "d6b3bc92-029c-4792-9e57-0765f51aef8f",
+        "name": "Vintage Leather 15BC",
+        "slug": "vintage-leather-15bc",
+        "description": "Premium Watches from Rolex. Experience styling and function with the Vintage Leather 15BC.",
+        "price": 82615,
+        "discountPrice": 65265,
+        "stock": 78,
+        "images": [
+          "https://images.unsplash.com/photo-1526045612212-70fadcd9c94d?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Watches",
+        "tags": [
+          "watches",
+          "rolex",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Rolex",
+          "weight": "1106g"
+        },
+        "createdAt": "2025-04-05T07:40:51.114Z",
+        "updatedAt": "2025-08-30T23:24:16.256Z"
+      },
+      {
+        "id": "39ec3197-721a-4fcb-8ff1-69317a3e8adb",
+        "name": "OnePlus 10T 83FA",
+        "slug": "oneplus-10t-83fa",
+        "description": "Premium Mobiles from Google. Experience styling and function with the OnePlus 10T 83FA.",
+        "price": 21169,
+        "discountPrice": null,
+        "stock": 182,
+        "images": [
+          "https://images.unsplash.com/photo-1592899677789-da412752dd3d?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Mobiles",
+        "tags": [
+          "mobiles",
+          "google",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Google",
+          "weight": "1666g"
+        },
+        "createdAt": "2025-08-30T21:05:57.329Z",
+        "updatedAt": "2025-12-03T15:56:26.232Z"
+      },
+      {
+        "id": "6ee06b81-4166-458c-8b3d-ee806d94f581",
+        "name": "Vintage Leather 2C43",
+        "slug": "vintage-leather-2c43",
+        "description": "Premium Watches from Omega. Experience styling and function with the Vintage Leather 2C43.",
+        "price": 75449,
+        "discountPrice": null,
+        "stock": 22,
+        "images": [
+          "https://images.unsplash.com/photo-1522312346375-d1a52e208932?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Watches",
+        "tags": [
+          "watches",
+          "omega",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Omega",
+          "weight": "1325g"
+        },
+        "createdAt": "2025-04-02T11:40:25.476Z",
+        "updatedAt": "2025-05-01T14:53:32.046Z"
+      },
+      {
+        "id": "924f7e2d-87d5-452f-b084-b213adf74d08",
+        "name": "Galaxy S22 4F2C",
+        "slug": "galaxy-s22-4f2c",
+        "description": "Premium Mobiles from Apple. Experience styling and function with the Galaxy S22 4F2C.",
+        "price": 65983,
+        "discountPrice": 52786,
+        "stock": 81,
+        "images": [
+          "https://images.unsplash.com/photo-1573148195900-7845dcb9d127?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Mobiles",
+        "tags": [
+          "mobiles",
+          "apple",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Apple",
+          "weight": "1223g"
+        },
+        "createdAt": "2025-10-17T02:44:55.651Z",
+        "updatedAt": "2025-11-04T16:12:08.795Z"
+      },
+      {
+        "id": "eee5eb4a-1458-4554-be0e-34411f54df7a",
+        "name": "Laptop Sleeve FF1E",
+        "slug": "laptop-sleeve-ff1e",
+        "description": "Premium Bags from Gucci. Experience styling and function with the Laptop Sleeve FF1E.",
+        "price": 8758,
+        "discountPrice": null,
+        "stock": 182,
+        "images": [
+          "https://images.unsplash.com/photo-1491637639811-60e2756cc1c9?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Bags",
+        "tags": [
+          "bags",
+          "gucci",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Gucci",
+          "weight": "735g"
+        },
+        "createdAt": "2025-02-03T18:27:34.403Z",
+        "updatedAt": "2025-11-13T12:30:40.755Z"
+      },
+      {
+        "id": "7f50f13b-984a-40ab-a2aa-2086e9fe4911",
+        "name": "Digital Smart 7202",
+        "slug": "digital-smart-7202",
+        "description": "Premium Watches from Fossil. Experience styling and function with the Digital Smart 7202.",
+        "price": 87874,
+        "discountPrice": null,
+        "stock": 150,
+        "images": [
+          "https://images.unsplash.com/photo-1542496658-e33a6d0d50e6?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Watches",
+        "tags": [
+          "watches",
+          "fossil",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Fossil",
+          "weight": "786g"
+        },
+        "createdAt": "2025-07-17T13:54:01.147Z",
+        "updatedAt": "2025-11-10T16:02:03.968Z"
+      },
+      {
+        "id": "f6300373-0a3e-43a9-a206-f9a966b6210c",
+        "name": "ZenBook Duo C44E",
+        "slug": "zenbook-duo-c44e",
+        "description": "Premium Laptops from Apple. Experience styling and function with the ZenBook Duo C44E.",
+        "price": 216214,
+        "discountPrice": null,
+        "stock": 64,
+        "images": [
+          "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Laptops",
+        "tags": [
+          "laptops",
+          "apple",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Apple",
+          "weight": "544g"
+        },
+        "createdAt": "2025-07-10T11:53:34.114Z",
+        "updatedAt": "2025-10-13T03:22:17.379Z"
+      },
+      {
+        "id": "2aa5d991-3b6e-4796-a606-9033410527e5",
+        "name": "Running Zoom CB28",
+        "slug": "running-zoom-cb28",
+        "description": "Premium Shoes from Reebok. Experience styling and function with the Running Zoom CB28.",
+        "price": 10167,
+        "discountPrice": null,
+        "stock": 141,
+        "images": [
+          "https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Shoes",
+        "tags": [
+          "shoes",
+          "reebok",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Reebok",
+          "weight": "1287g"
+        },
+        "createdAt": "2025-10-06T19:33:35.215Z",
+        "updatedAt": "2025-11-29T21:38:53.458Z"
+      },
+      {
+        "id": "2347321c-30c5-42ac-8b30-aad63b0d07cd",
+        "name": "Canvas Loafers 87C5",
+        "slug": "canvas-loafers-87c5",
+        "description": "Premium Shoes from Adidas. Experience styling and function with the Canvas Loafers 87C5.",
+        "price": 5904,
+        "discountPrice": null,
+        "stock": 169,
+        "images": [
+          "https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Shoes",
+        "tags": [
+          "shoes",
+          "adidas",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Adidas",
+          "weight": "1514g"
+        },
+        "createdAt": "2025-10-08T19:21:52.536Z",
+        "updatedAt": "2025-11-18T08:34:52.407Z"
+      },
+      {
+        "id": "f5c40d3b-8b8b-4815-acaa-687dc8eb2b3c",
+        "name": "Classic Analog 96C9",
+        "slug": "classic-analog-96c9",
+        "description": "Premium Watches from Titan. Experience styling and function with the Classic Analog 96C9.",
+        "price": 15599,
+        "discountPrice": 12791,
+        "stock": 105,
+        "images": [
+          "https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Watches",
+        "tags": [
+          "watches",
+          "titan",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Titan",
+          "weight": "1279g"
+        },
+        "createdAt": "2025-07-20T22:15:51.911Z",
+        "updatedAt": "2025-11-19T21:12:40.959Z"
+      },
+      {
+        "id": "76200b91-add2-4af6-84dd-af63e08d80f8",
+        "name": "Galaxy S22 82E9",
+        "slug": "galaxy-s22-82e9",
+        "description": "Premium Mobiles from Apple. Experience styling and function with the Galaxy S22 82E9.",
+        "price": 108713,
+        "discountPrice": 94580,
+        "stock": 98,
+        "images": [
+          "https://images.unsplash.com/photo-1592899677789-da412752dd3d?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Mobiles",
+        "tags": [
+          "mobiles",
+          "apple",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Apple",
+          "weight": "785g"
+        },
+        "createdAt": "2025-03-15T14:47:34.839Z",
+        "updatedAt": "2025-09-06T18:55:34.465Z"
+      },
+      {
+        "id": "cb8fde0e-7734-43b5-99da-3ea5a7a571bf",
+        "name": "Redmi Note 9C47",
+        "slug": "redmi-note-9c47",
+        "description": "Premium Mobiles from Xiaomi. Experience styling and function with the Redmi Note 9C47.",
+        "price": 146798,
+        "discountPrice": null,
+        "stock": 70,
+        "images": [
+          "https://images.unsplash.com/photo-1573148195900-7845dcb9d127?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Mobiles",
+        "tags": [
+          "mobiles",
+          "xiaomi",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Xiaomi",
+          "weight": "425g"
+        },
+        "createdAt": "2025-09-21T05:24:38.890Z",
+        "updatedAt": "2025-10-20T17:12:03.307Z"
+      },
+      {
+        "id": "6f327142-2cf7-4a08-b573-401df81a371b",
+        "name": "Travel Backpack EE28",
+        "slug": "travel-backpack-ee28",
+        "description": "Premium Bags from Gucci. Experience styling and function with the Travel Backpack EE28.",
+        "price": 13401,
+        "discountPrice": 11390,
+        "stock": 150,
+        "images": [
+          "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Bags",
+        "tags": [
+          "bags",
+          "gucci",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Gucci",
+          "weight": "1364g"
+        },
+        "createdAt": "2025-10-25T08:13:33.352Z",
+        "updatedAt": "2025-11-14T07:18:27.919Z"
+      },
+      {
+        "id": "020f2007-0f5e-4be1-8c3d-67bfa005f6bc",
+        "name": "ThinkPad X1 33FE",
+        "slug": "thinkpad-x1-33fe",
+        "description": "Premium Laptops from Dell. Experience styling and function with the ThinkPad X1 33FE.",
+        "price": 53180,
+        "discountPrice": null,
+        "stock": 139,
+        "images": [
+          "https://images.unsplash.com/photo-1517336714731-489689fd1ca4?auto=format&fit=crop&w=600&q=80"
+        ],
+        "category": "Laptops",
+        "tags": [
+          "laptops",
+          "dell",
+          "trending"
+        ],
+        "metadata": {
+          "brand": "Dell",
+          "weight": "1034g"
+        },
+        "createdAt": "2025-05-12T19:41:58.463Z",
+        "updatedAt": "2025-12-02T14:32:09.787Z"
+      }
+    ]
+  }
+]
