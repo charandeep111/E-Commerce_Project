@@ -28,8 +28,8 @@ exports.register = async (req, res) => {
         if (err.code === 11000) {
             return res.status(400).json({ msg: 'Email already exists' });
         }
-        console.error(err);
-        res.status(500).json({ msg: 'Server error' });
+        console.error('Registration Error Details:', err);
+        res.status(500).json({ msg: 'Server error: ' + err.message });
     }
 };
 
@@ -46,8 +46,8 @@ exports.login = async (req, res) => {
         const token = generateToken(user);
         res.json({ token, user: { id: user._id, name: user.name, email, role: user.role } });
     } catch (err) {
-        console.error(err);
-        res.status(500).json({ msg: 'Server error' });
+        console.error('Login Error Details:', err);
+        res.status(500).json({ msg: 'Server error: ' + err.message });
     }
 };
 // @desc   Get current user profile

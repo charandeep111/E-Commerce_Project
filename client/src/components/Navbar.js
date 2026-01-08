@@ -27,8 +27,8 @@ const Navbar = () => {
                         transition={{ duration: 0.5 }}
                     >
                         <Link to="/" className="flex items-center">
-                            <span className="text-3xl font-display font-black tracking-tighter bg-gradient-to-r from-gray-900 via-primary-600 to-gray-900 bg-clip-text text-transparent transform hover:scale-105 transition-transform">
-                                APEX
+                            <span className="text-2xl font-display font-black tracking-tighter text-gray-900 hover:text-primary-600 transition-colors">
+                                Apex Marketplace
                             </span>
                         </Link>
                     </motion.div>
@@ -90,8 +90,8 @@ const Navbar = () => {
                                     Login
                                 </Link>
                                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                                    <Link to="/register" className="px-6 py-2.5 bg-gray-900 text-white rounded-xl font-bold hover:bg-black transition-all shadow-xl shadow-gray-200">
-                                        JOIN APEX
+                                    <Link to="/register" className="px-6 py-2.5 bg-primary-600 text-white rounded-xl font-bold hover:bg-primary-700 transition-all shadow-xl shadow-primary-900/20 uppercase tracking-widest text-xs">
+                                        Join Now
                                     </Link>
                                 </motion.div>
                             </div>
