@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import api from '../utils/api';
 import ProductCard from '../components/ProductCard';
 import CategoryBreadcrumb from '../components/CategoryBreadcrumb';
+import CategoryGrid from '../components/CategoryGrid';
 import RelatedProducts from '../components/RelatedProducts';
 import { FiFilter } from 'react-icons/fi';
 import { Helmet } from 'react-helmet-async';
@@ -316,27 +317,12 @@ const ProductsPage = () => {
                     </div>
 
                     {shouldShowNavigation && (
-                        <div className="mb-8 bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden">
-                            <div className="p-4 border-b border-gray-100 bg-gray-50">
-                                <h3 className="font-bold text-gray-900">Select {navigationLevel === 'root' ? 'Category' : navigationLevel === 'subCategory' ? 'Subcategory' : 'Product Type'}</h3>
-                            </div>
-                            <div className="divide-y divide-gray-100">
-                                {navigationItems.map((item) => (
-                                    <button
-                                        key={item.name || item.productType}
-                                        onClick={() => handleCategoryItemClick(item)}
-                                        className="w-full flex items-center justify-between p-4 hover:bg-primary-50 transition-colors group text-left"
-                                    >
-                                        <div className="flex items-center space-x-3">
-                                            <div className="w-2 h-2 rounded-full bg-primary-400 group-hover:bg-primary-600 transition-colors"></div>
-                                            <span className="font-medium text-gray-700 group-hover:text-primary-700">{item.name}</span>
-                                        </div>
-                                        <svg className="w-5 h-5 text-gray-400 group-hover:text-primary-600 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="9 5l7 7-7 7" />
-                                        </svg>
-                                    </button>
-                                ))}
-                            </div>
+                        <div className="mb-8">
+                            <CategoryGrid
+                                items={navigationItems}
+                                level={navigationLevel}
+                                onItemClick={handleCategoryItemClick}
+                            />
                         </div>
                     )}
 
