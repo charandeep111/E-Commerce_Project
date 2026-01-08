@@ -79,8 +79,8 @@ const Footer = () => {
                 <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-dark-muted gap-4">
                     <p>&copy; {new Date().getFullYear()} Apex. All rights reserved.</p>
                     <div className="flex space-x-6">
-                        <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-                        <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+                        <button onClick={() => toast('Privacy Policy coming soon!')} className="hover:text-white transition-colors">Privacy Policy</button>
+                        <button onClick={() => toast('Terms of Service coming soon!')} className="hover:text-white transition-colors">Terms of Service</button>
                     </div>
                 </div>
             </div>

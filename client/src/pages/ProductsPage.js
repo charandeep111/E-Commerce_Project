@@ -42,7 +42,7 @@ const ProductsPage = () => {
             return true;
         }
         return false;
-    }, [category, productType, isDirectProductCategory]);
+    }, [category, productType, isDirectProductCategory, search]);
 
     const getBreadcrumb = useCallback(() => {
         const breadcrumb = [];

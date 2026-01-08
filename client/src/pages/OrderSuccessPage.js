@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { FiCheckCircle, FiPackage, FiHome } from 'react-icons/fi';
-import api from '../utils/api';
 
 const OrderSuccessPage = () => {
     // Determine if we need to fetch the last order details or just show generic success message
