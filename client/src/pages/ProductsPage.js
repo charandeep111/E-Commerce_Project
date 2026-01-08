@@ -3,7 +3,6 @@ import { useSearchParams } from 'react-router-dom';
 import api from '../utils/api';
 import ProductCard from '../components/ProductCard';
 import CategoryBreadcrumb from '../components/CategoryBreadcrumb';
-import CategoryGrid from '../components/CategoryGrid';
 import RelatedProducts from '../components/RelatedProducts';
 import { FiFilter } from 'react-icons/fi';
 import { Helmet } from 'react-helmet-async';
