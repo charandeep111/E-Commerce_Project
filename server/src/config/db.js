@@ -2,16 +2,19 @@
 const mongoose = require('mongoose');
 
 const connectDB = async () => {
-    const uri = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/ecommerce';
+    const uri = process.env.MONGODB_URI;
+    console.log('Attempting to connect to MongoDB with URI:', uri ? 'URI provided (masked)' : 'URI MISSING');
+
+    if (!uri) {
+        console.error('CRITICAL: MONGODB_URI is not defined in environment variables.');
+        return;
+    }
+
     try {
-        await mongoose.connect(uri, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        });
-        console.log('MongoDB connected');
+        await mongoose.connect(uri);
+        console.log('SUCCESS: MongoDB connected to Atlas');
     } catch (err) {
-        console.error('MongoDB connection error (non‑fatal):', err.message);
-        // Continue without terminating so the server can still run for route testing
+        console.error('ERROR: MongoDB connection failure:', err.message);
     }
 };
 
