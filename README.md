@@ -87,11 +87,23 @@ Apex/
 
 ## 🚀 Deployment
 
-### Frontend (Vercel)
-The client is optimized for Vercel deployment. Ensure you set the `BUILD` command to `npm run build` and `OUTPUT DIRECTORY` to `build`.
+### Unified Deployment (Vercel)
+This project is configured for a unified deployment on Vercel using the root `vercel.json`. 
 
-### Backend (Render / Railway)
-Deploy the `server` directory. Ensure `NODE_ENV` is set to `production` and all environment variables are populated in the platform's dashboard.
+1. **Connect to GitHub**: Link your repository to Vercel.
+2. **Environment Variables**: Add the following variables in the Vercel dashboard:
+   - `MONGODB_URI`
+   - `JWT_SECRET`
+   - `CLOUDINARY_CLOUD_NAME`
+   - `CLOUDINARY_API_KEY`
+   - `CLOUDINARY_API_SECRET`
+   - `REACT_APP_API_URL` (Optional, defaults to `/api` in production)
+3. **Deploy**: Vercel will automatically detect the configuration and deploy both the frontend and the serverless backend functions.
+
+### Manual Configuration
+- **Build Command**: `npm run build` (inside `client/`)
+- **Output Directory**: `client/build`
+- **Root Directory**: Project root (`/`)
 
 ## 📝 License
 MIT License - 2026 Apex Marketplace.
