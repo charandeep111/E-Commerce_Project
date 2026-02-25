@@ -36,7 +36,7 @@ const CategoryGrid = ({ items, level, onItemClick }) => {
         <div className={`grid ${getLevelStyles()} gap-4`}>
             {items.map((item) => (
                 <button
-                    key={item.name || item.productType}
+                    key={item._id || item.name || item.productType}
                     onClick={() => onItemClick(item)}
                     className={`group relative p-6 rounded-xl border ${getCardStyles()} hover:shadow-lg hover:border-primary-300 transition-all duration-300 text-left`}
                 >

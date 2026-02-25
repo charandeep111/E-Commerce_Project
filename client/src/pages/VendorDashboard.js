@@ -11,13 +11,18 @@ const VendorDashboard = () => {
     const [activeTab, setActiveTab] = useState('products');
     const [loading, setLoading] = useState(true);
 
+    // Category/subcategory lists for the form
+    const [allCategories, setAllCategories] = useState([]);
+    const [formSubcategories, setFormSubcategories] = useState([]);
+
     // Form state for adding product
     const [showAddModal, setShowAddModal] = useState(false);
     const [newProduct, setNewProduct] = useState({
         title: '',
         price: '',
         description: '',
-        category: 'Electronics', // Default
+        categoryId: '',
+        subcategoryId: '',
         stock: ''
     });
 
@@ -25,12 +30,14 @@ const VendorDashboard = () => {
         const fetchData = async () => {
             try {
                 setLoading(true);
-                const [productsRes, ordersRes] = await Promise.all([
+                const [productsRes, ordersRes, categoriesRes] = await Promise.all([
                     api.get('/products/vendor'),
-                    api.get('/orders/vendor')
+                    api.get('/orders/vendor'),
+                    api.get('/categories'),
                 ]);
                 setProducts(productsRes.data);
                 setOrders(ordersRes.data);
+                setAllCategories(categoriesRes.data);
             } catch (error) {
                 console.error("Failed to fetch vendor data", error);
             } finally {
@@ -42,6 +49,19 @@ const VendorDashboard = () => {
             fetchData();
         }
     }, [user]);
+
+    // Fetch subcategories when category changes in the form
+    const handleFormCategoryChange = async (categoryId) => {
+        setNewProduct(prev => ({ ...prev, categoryId, subcategoryId: '' }));
+        setFormSubcategories([]);
+        if (!categoryId) return;
+        try {
+            const { data } = await api.get(`/categories/${categoryId}/subcategories`);
+            setFormSubcategories(data.subcategories || []);
+        } catch (err) {
+            console.error('Failed to fetch subcategories for form', err);
+        }
+    };
 
     const handleDeleteProduct = async (id) => {
         if (!window.confirm("Are you sure you want to delete this product?")) return;
@@ -68,16 +88,17 @@ const VendorDashboard = () => {
             formData.append('title', newProduct.title);
             formData.append('price', newProduct.price);
             formData.append('description', newProduct.description);
-            formData.append('category', newProduct.category);
+            formData.append('categoryId', newProduct.categoryId);
+            formData.append('subcategoryId', newProduct.subcategoryId);
             formData.append('stock', newProduct.stock);
-            // No image file input yet in this simple form, will fail or just have no images.
 
             const { data } = await api.post('/products', formData, {
                 headers: { 'Content-Type': 'multipart/form-data' }
             });
             setProducts([...products, data]);
             setShowAddModal(false);
-            setNewProduct({ title: '', price: '', description: '', category: 'Electronics', stock: '' });
+            setNewProduct({ title: '', price: '', description: '', categoryId: '', subcategoryId: '', stock: '' });
+            setFormSubcategories([]);
         } catch (error) {
             console.error("Failed to create product", error);
             alert("Failed to create product");
@@ -245,13 +266,29 @@ const VendorDashboard = () => {
                                     required
                                 />
                             </div>
-                            <input
+                            <select
                                 className="w-full border border-gray-300 px-4 py-2 rounded-lg"
-                                placeholder="Category"
-                                value={newProduct.category}
-                                onChange={e => setNewProduct({ ...newProduct, category: e.target.value })}
+                                value={newProduct.categoryId}
+                                onChange={e => handleFormCategoryChange(e.target.value)}
                                 required
-                            />
+                            >
+                                <option value="">Select Category</option>
+                                {allCategories.map(cat => (
+                                    <option key={cat._id} value={cat._id}>{cat.name}</option>
+                                ))}
+                            </select>
+                            <select
+                                className="w-full border border-gray-300 px-4 py-2 rounded-lg"
+                                value={newProduct.subcategoryId}
+                                onChange={e => setNewProduct({ ...newProduct, subcategoryId: e.target.value })}
+                                required
+                                disabled={!newProduct.categoryId}
+                            >
+                                <option value="">Select Subcategory</option>
+                                {formSubcategories.map(sub => (
+                                    <option key={sub._id} value={sub._id}>{sub.name}</option>
+                                ))}
+                            </select>
                             <textarea
                                 className="w-full border border-gray-300 px-4 py-2 rounded-lg"
                                 placeholder="Description"

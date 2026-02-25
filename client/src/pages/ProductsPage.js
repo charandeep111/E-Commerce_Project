@@ -9,200 +9,228 @@ import { FiFilter } from 'react-icons/fi';
 import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const DIRECT_PRODUCT_CATEGORIES = [];
-
 const ProductsPage = () => {
     const [searchParams, setSearchParams] = useSearchParams();
     const [products, setProducts] = useState([]);
-    const [relatedProducts, setRelatedProducts] = useState([]);
-    const [navigationItems, setNavigationItems] = useState([]);
-    const [navigationLevel, setNavigationLevel] = useState('root');
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
 
-    const [category, setCategory] = useState(searchParams.get('category') || '');
-    const [subCategory, setSubCategory] = useState(searchParams.get('subCategory') || '');
-    const [productType, setProductType] = useState(searchParams.get('productType') || '');
-    const [selectedBrand, setSelectedBrand] = useState(searchParams.get('brand') || '');
-    const [sort, setSort] = useState('newest');
-    const [minPrice, setMinPrice] = useState('');
-    const [maxPrice, setMaxPrice] = useState('');
-    const [search, setSearch] = useState(searchParams.get('search') || '');
-    const [availableBrands, setAvailableBrands] = useState([]);
+    // Navigation state — now uses ObjectId references
+    const [categories, setCategories] = useState([]);
+    const [subcategories, setSubcategories] = useState([]);
+    const [selectedCategory, setSelectedCategory] = useState(null);   // { _id, name, slug }
+    const [selectedSubcategory, setSelectedSubcategory] = useState(null); // { _id, name, slug }
 
-    const isDirectProductCategory = useCallback((cat) => {
-        return DIRECT_PRODUCT_CATEGORIES.includes(cat);
+    // Filters
+    const [sort, setSort] = useState('newest');
+    const [search, setSearch] = useState(searchParams.get('search') || '');
+
+    // Determine what level we're at
+    const currentLevel = selectedSubcategory ? 'products' : selectedCategory ? 'subcategories' : 'categories';
+
+    // ─── Fetch all categories (top level) ────────────────────────────
+    const fetchCategories = useCallback(async () => {
+        try {
+            const { data } = await api.get('/categories');
+            setCategories(data);
+        } catch (err) {
+            console.error('Failed to fetch categories', err);
+        }
     }, []);
 
-    const shouldShowProductsDirectly = useCallback(() => {
-        if (isDirectProductCategory(category)) {
-            return true;
-        }
-        if (productType || search) {
-            return true;
-        }
-        return false;
-    }, [category, productType, isDirectProductCategory, search]);
-
-    const getBreadcrumb = useCallback(() => {
-        const breadcrumb = [];
-        if (category) breadcrumb.push({ level: 'category', name: category, value: category });
-        if (subCategory) breadcrumb.push({ level: 'subCategory', name: subCategory, value: subCategory });
-        if (productType) {
-            const displayName = productType.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-            breadcrumb.push({ level: 'productType', name: displayName, value: productType });
-        }
-        return breadcrumb;
-    }, [category, subCategory, productType]);
-
-    const fetchNavigation = useCallback(async () => {
-        if (isDirectProductCategory(category)) {
-            setNavigationItems([]);
-            setNavigationLevel('leaf');
-            return;
-        }
-
-        try {
-            let query = '?';
-            if (category) query += `category=${encodeURIComponent(category)}&`;
-            if (subCategory) query += `subCategory=${encodeURIComponent(subCategory)}&`;
-
-            const { data } = await api.get(`/products/navigation${query}`);
-            let items = data.items || [];
-
-            if (!category) {
-                const landingCategories = [
-                    'Electronics',
-                    'Fashion',
-                    'Home',
-                    'Beauty',
-                    'Sports'
-                ];
-                items = items.filter(item => landingCategories.includes(item.name));
-            }
-
-            setNavigationItems(items);
-            setNavigationLevel(data.level || 'root');
-        } catch (err) {
-            console.error('Failed to fetch navigation', err);
-            setNavigationItems([]);
-        }
-    }, [category, subCategory, isDirectProductCategory]);
-
-    const fetchBrands = useCallback(async () => {
-        try {
-            let query = '?';
-            if (category) query += `category=${encodeURIComponent(category)}&`;
-            if (subCategory) query += `subCategory=${encodeURIComponent(subCategory)}&`;
-            if (productType) query += `productType=${encodeURIComponent(productType)}&`;
-
-            const { data } = await api.get(`/products/brands${query}`);
-            setAvailableBrands(data || []);
-        } catch (err) {
-            console.error('Failed to fetch brands', err);
-        }
-    }, [category, subCategory, productType]);
-
-    const fetchProducts = useCallback(async () => {
+    // ─── Fetch subcategories for a specific category ─────────────────
+    const fetchSubcategories = useCallback(async (categoryId) => {
         try {
             setLoading(true);
-            let query = '?';
-            if (category) query += `category=${encodeURIComponent(category)}&`;
-            if (subCategory) query += `subCategory=${encodeURIComponent(subCategory)}&`;
-            if (productType) query += `productType=${encodeURIComponent(productType)}&`;
-            if (selectedBrand) query += `brand=${encodeURIComponent(selectedBrand)}&`;
-            if (minPrice) query += `minPrice=${minPrice}&`;
-            if (maxPrice) query += `maxPrice=${maxPrice}&`;
-            if (sort) query += `sort=${sort}&`;
+            // THE KEY ENDPOINT — only returns subcategories for THIS categoryId
+            const { data } = await api.get(`/categories/${categoryId}/subcategories`);
+            setSubcategories(data.subcategories || []);
+        } catch (err) {
+            console.error('Failed to fetch subcategories', err);
+            setSubcategories([]);
+        } finally {
+            setLoading(false);
+        }
+    }, []);
+
+    // ─── Fetch products for a specific subcategory ───────────────────
+    const fetchProducts = useCallback(async (subcategoryId) => {
+        try {
+            setLoading(true);
+            let query = `?`;
+            if (sort && sort !== 'newest') query += `sort=${sort}&`;
             if (search) query += `search=${encodeURIComponent(search)}&`;
 
-            const { data } = await api.get(`/products/with-related${query}`);
-            setProducts(data.primary || []);
-            setRelatedProducts(data.related || []);
+            // THE KEY ENDPOINT — only returns products for THIS subcategoryId
+            const { data } = await api.get(`/subcategories/${subcategoryId}/products${query}`);
+            setProducts(data.products || []);
         } catch (err) {
             setError('Failed to load products');
             console.error(err);
         } finally {
             setLoading(false);
         }
-    }, [category, subCategory, productType, selectedBrand, minPrice, maxPrice, sort, search]);
+    }, [sort, search]);
 
-    useEffect(() => {
-        setCategory(searchParams.get('category') || '');
-        setSubCategory(searchParams.get('subCategory') || '');
-        setProductType(searchParams.get('productType') || '');
-        setSelectedBrand(searchParams.get('brand') || '');
-        setSearch(searchParams.get('search') || '');
-    }, [searchParams]);
+    // ─── Fetch all products for a category ───────────────────────────
+    const fetchCategoryProducts = useCallback(async (categoryId) => {
+        try {
+            setLoading(true);
+            let query = `?`;
+            if (sort && sort !== 'newest') query += `sort=${sort}&`;
+            if (search) query += `search=${encodeURIComponent(search)}&`;
 
-    useEffect(() => {
-        fetchNavigation();
-        fetchBrands();
-    }, [fetchNavigation, fetchBrands]);
-
-    useEffect(() => {
-        const showProducts = shouldShowProductsDirectly();
-        if (showProducts) {
-            fetchProducts();
-        } else {
-            setProducts([]);
-            setRelatedProducts([]);
+            const { data } = await api.get(`/categories/${categoryId}/products${query}`);
+            setProducts(data.products || []);
+        } catch (err) {
+            setError('Failed to load products');
+            console.error(err);
+        } finally {
             setLoading(false);
         }
-    }, [shouldShowProductsDirectly, fetchProducts]);
+    }, [sort, search]);
 
-    const updateURL = (newCategory, newSubCategory, newProductType, newBrand, newSearch) => {
-        const params = new URLSearchParams();
-        if (newCategory) params.set('category', newCategory);
-        if (newSubCategory) params.set('subCategory', newSubCategory);
-        if (newProductType) params.set('productType', newProductType);
-        if (newBrand) params.set('brand', newBrand);
-        if (newSearch) params.set('search', newSearch);
-        setSearchParams(params);
-    };
+    // ─── Initialize: load categories ─────────────────────────────────
+    useEffect(() => {
+        fetchCategories();
+    }, [fetchCategories]);
 
-    const handleNavigate = (newCategory, newSubCategory, newProductType) => {
-        setCategory(newCategory || '');
-        setSubCategory(newSubCategory || '');
-        setProductType(newProductType || '');
-        setSelectedBrand('');
+    // ─── Handle URL params on load ───────────────────────────────────
+    useEffect(() => {
+        const catId = searchParams.get('categoryId');
+        const subId = searchParams.get('subcategoryId');
+        const searchQ = searchParams.get('search');
+
+        if (searchQ) setSearch(searchQ);
+
+        if (subId) {
+            // Subcategory selected — fetch products
+            // We need to reconstruct the category/subcategory info
+            (async () => {
+                try {
+                    const { data } = await api.get(`/subcategories/${subId}/products`);
+                    setSelectedSubcategory(data.subcategory);
+                    setSelectedCategory(data.subcategory.categoryId);
+                    setProducts(data.products || []);
+                    setLoading(false);
+                } catch (err) {
+                    console.error(err);
+                    setLoading(false);
+                }
+            })();
+        } else if (catId) {
+            // Category selected — fetch subcategories
+            (async () => {
+                try {
+                    const { data } = await api.get(`/categories/${catId}/subcategories`);
+                    setSelectedCategory(data.category);
+                    setSubcategories(data.subcategories || []);
+                    setLoading(false);
+                } catch (err) {
+                    console.error(err);
+                    setLoading(false);
+                }
+            })();
+        } else {
+            setLoading(false);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    // ─── Refetch products when sort/search changes ───────────────────
+    useEffect(() => {
+        if (selectedSubcategory) {
+            fetchProducts(selectedSubcategory._id);
+        }
+    }, [sort, search, selectedSubcategory, fetchProducts]);
+
+    // ─── Navigation handlers ─────────────────────────────────────────
+    const handleCategoryClick = (category) => {
+        setSelectedCategory(category);
+        setSelectedSubcategory(null);
+        setProducts([]);
+        setError('');
         setSearch('');
-        updateURL(newCategory, newSubCategory, newProductType, '', '');
+
+        const params = new URLSearchParams();
+        params.set('categoryId', category._id);
+        setSearchParams(params);
+
+        fetchSubcategories(category._id);
     };
 
-    const handleCategoryItemClick = (item) => {
-        if (item.type === 'category') {
-            handleNavigate(item.name, null, null);
-        } else if (item.type === 'subCategory') {
-            handleNavigate(category, item.name, null);
-        } else if (item.type === 'productType') {
-            handleNavigate(category, subCategory, item.productType);
+    const handleSubcategoryClick = (subcategory) => {
+        setSelectedSubcategory(subcategory);
+        setProducts([]);
+        setError('');
+
+        const params = new URLSearchParams();
+        params.set('categoryId', selectedCategory._id);
+        params.set('subcategoryId', subcategory._id);
+        setSearchParams(params);
+
+        fetchProducts(subcategory._id);
+    };
+
+    const handleBreadcrumbNavigate = (level) => {
+        if (level === 'root') {
+            // Go back to all categories
+            setSelectedCategory(null);
+            setSelectedSubcategory(null);
+            setProducts([]);
+            setSubcategories([]);
+            setSearch('');
+            setSearchParams({});
+        } else if (level === 'category') {
+            // Go back to subcategories
+            setSelectedSubcategory(null);
+            setProducts([]);
+            setSearch('');
+            const params = new URLSearchParams();
+            params.set('categoryId', selectedCategory._id);
+            setSearchParams(params);
+            fetchSubcategories(selectedCategory._id);
         }
     };
 
     const clearFilters = () => {
         setSearchParams({});
-        setCategory('');
-        setSubCategory('');
-        setProductType('');
-        setSelectedBrand('');
-        setMinPrice('');
-        setMaxPrice('');
+        setSelectedCategory(null);
+        setSelectedSubcategory(null);
+        setProducts([]);
+        setSubcategories([]);
         setSearch('');
         setSort('newest');
+        setError('');
+    };
+
+    // ─── Build breadcrumb ────────────────────────────────────────────
+    const getBreadcrumb = () => {
+        const breadcrumb = [];
+        if (selectedCategory) {
+            breadcrumb.push({
+                level: 'category',
+                name: selectedCategory.name,
+                value: selectedCategory._id,
+            });
+        }
+        if (selectedSubcategory) {
+            breadcrumb.push({
+                level: 'subCategory',
+                name: selectedSubcategory.name,
+                value: selectedSubcategory._id,
+            });
+        }
+        return breadcrumb;
     };
 
     const getPageTitle = () => {
-        if (productType) {
-            return productType.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-        }
-        if (subCategory) return subCategory;
-        if (category) return category;
+        if (selectedSubcategory) return selectedSubcategory.name;
+        if (selectedCategory) return selectedCategory.name;
         return 'Shop All Categories';
     };
 
-    const showProducts = shouldShowProductsDirectly();
-    const shouldShowNavigation = !showProducts && navigationItems.length > 0;
+    const showProducts = currentLevel === 'products';
 
     return (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -211,9 +239,16 @@ const ProductsPage = () => {
                 <meta name="description" content={`Explore ${getPageTitle()} at Apex. Premium quality products with best prices.`} />
             </Helmet>
 
-            <CategoryBreadcrumb breadcrumb={getBreadcrumb()} onNavigate={handleNavigate} />
+            <CategoryBreadcrumb
+                breadcrumb={getBreadcrumb()}
+                onNavigate={(catVal, subVal) => {
+                    if (!catVal && !subVal) handleBreadcrumbNavigate('root');
+                    else if (catVal && !subVal) handleBreadcrumbNavigate('category');
+                }}
+            />
 
             <div className="flex flex-col lg:flex-row gap-8">
+                {/* Sidebar */}
                 <div className="w-full lg:w-64 flex-shrink-0 space-y-8">
                     <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
                         <div className="flex items-center justify-between mb-4">
@@ -221,66 +256,18 @@ const ProductsPage = () => {
                             <button onClick={clearFilters} className="text-xs text-primary-600 hover:text-primary-800">Clear All</button>
                         </div>
 
-                        <div className="mb-6">
-                            <h4 className="font-medium text-gray-700 mb-2">Search</h4>
-                            <div className="relative">
-                                <input
-                                    type="text"
-                                    placeholder="Search products..."
-                                    value={search}
-                                    onChange={(e) => {
-                                        setSearch(e.target.value);
-                                        updateURL(category, subCategory, productType, selectedBrand, e.target.value);
-                                    }}
-                                    className="w-full p-2 border border-gray-300 rounded-md text-sm focus:ring-primary-500 focus:border-primary-500"
-                                />
-                            </div>
-                        </div>
-
                         {showProducts && (
                             <>
                                 <div className="mb-6">
-                                    <h4 className="font-medium text-gray-700 mb-2">Price Range</h4>
-                                    <div className="flex gap-2">
-                                        <input
-                                            type="number"
-                                            placeholder="Min"
-                                            value={minPrice}
-                                            onChange={(e) => setMinPrice(e.target.value)}
-                                            className="w-1/2 p-2 border border-gray-300 rounded-md text-sm"
-                                        />
-                                        <input
-                                            type="number"
-                                            placeholder="Max"
-                                            value={maxPrice}
-                                            onChange={(e) => setMaxPrice(e.target.value)}
-                                            className="w-1/2 p-2 border border-gray-300 rounded-md text-sm"
-                                        />
-                                    </div>
+                                    <h4 className="font-medium text-gray-700 mb-2">Search</h4>
+                                    <input
+                                        type="text"
+                                        placeholder="Search products..."
+                                        value={search}
+                                        onChange={(e) => setSearch(e.target.value)}
+                                        className="w-full p-2 border border-gray-300 rounded-md text-sm focus:ring-primary-500 focus:border-primary-500"
+                                    />
                                 </div>
-
-                                {availableBrands.length > 0 && (
-                                    <div className="mb-6">
-                                        <h4 className="font-medium text-gray-700 mb-2">Brand</h4>
-                                        <div className="space-y-2 max-h-48 overflow-y-auto custom-scrollbar">
-                                            {availableBrands.map(brand => (
-                                                <label key={brand} className="flex items-center space-x-2 text-sm text-gray-600 cursor-pointer hover:bg-gray-50 p-1 rounded transition-colors">
-                                                    <input
-                                                        type="checkbox"
-                                                        checked={selectedBrand === brand}
-                                                        onChange={() => {
-                                                            const newBrand = selectedBrand === brand ? '' : brand;
-                                                            setSelectedBrand(newBrand);
-                                                            updateURL(category, subCategory, productType, newBrand);
-                                                        }}
-                                                        className="text-primary-600 focus:ring-primary-500 h-4 w-4 rounded"
-                                                    />
-                                                    <span>{brand}</span>
-                                                </label>
-                                            ))}
-                                        </div>
-                                    </div>
-                                )}
                             </>
                         )}
 
@@ -290,6 +277,7 @@ const ProductsPage = () => {
                     </div>
                 </div>
 
+                {/* Main Content */}
                 <div className="flex-1">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-6">
                         <h1 className="text-2xl font-display font-bold text-gray-900">
@@ -316,16 +304,33 @@ const ProductsPage = () => {
                         )}
                     </div>
 
-                    {shouldShowNavigation && (
-                        <div className="mb-8">
-                            <CategoryGrid
-                                items={navigationItems}
-                                level={navigationLevel}
-                                onItemClick={handleCategoryItemClick}
-                            />
-                        </div>
+                    {/* Level: Categories */}
+                    {currentLevel === 'categories' && !loading && (
+                        <CategoryGrid
+                            items={categories.map(cat => ({
+                                ...cat,
+                                type: 'category',
+                                hasChildren: true,
+                            }))}
+                            level="root"
+                            onItemClick={(item) => handleCategoryClick(item)}
+                        />
                     )}
 
+                    {/* Level: Subcategories */}
+                    {currentLevel === 'subcategories' && !loading && (
+                        <CategoryGrid
+                            items={subcategories.map(sub => ({
+                                ...sub,
+                                type: 'subCategory',
+                                hasChildren: true,
+                            }))}
+                            level="subCategory"
+                            onItemClick={(item) => handleSubcategoryClick(item)}
+                        />
+                    )}
+
+                    {/* Level: Products */}
                     {showProducts && (
                         <>
                             {loading ? (
@@ -339,36 +344,36 @@ const ProductsPage = () => {
                                 </div>
                             ) : products.length === 0 ? (
                                 <div className="text-center py-12 bg-gray-50 rounded-xl border border-dashed border-gray-200">
-                                    <p className="text-gray-500">No products found matching your filters.</p>
-                                    <button onClick={clearFilters} className="mt-2 text-primary-600 font-medium hover:underline">Clear Filters</button>
+                                    <p className="text-gray-500">No products found in this subcategory.</p>
+                                    <button onClick={() => handleBreadcrumbNavigate('category')} className="mt-2 text-primary-600 font-medium hover:underline">
+                                        Browse other subcategories
+                                    </button>
                                 </div>
                             ) : (
-                                <>
-                                    <motion.div
-                                        layout
-                                        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-                                    >
-                                        <AnimatePresence>
-                                            {products.map((product) => (
-                                                <ProductCard key={product._id} product={product} />
-                                            ))}
-                                        </AnimatePresence>
-                                    </motion.div>
-
-                                    {relatedProducts.length > 0 && (
-                                        <RelatedProducts
-                                            products={relatedProducts}
-                                            title="You May Also Like"
-                                        />
-                                    )}
-                                </>
+                                <motion.div
+                                    layout
+                                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+                                >
+                                    <AnimatePresence>
+                                        {products.map((product) => (
+                                            <ProductCard key={product._id} product={product} />
+                                        ))}
+                                    </AnimatePresence>
+                                </motion.div>
                             )}
                         </>
                     )}
 
-                    {!showProducts && !shouldShowNavigation && !loading && (
+                    {/* Loading for category/subcategory levels */}
+                    {loading && currentLevel !== 'products' && (
+                        <div className="flex justify-center items-center h-64">
+                            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary-600"></div>
+                        </div>
+                    )}
+
+                    {currentLevel === 'categories' && categories.length === 0 && !loading && (
                         <div className="text-center py-12 bg-gray-50 rounded-xl border border-dashed border-gray-200">
-                            <p className="text-gray-500">Select a category to start browsing</p>
+                            <p className="text-gray-500">No categories found. Please run the seed script.</p>
                         </div>
                     )}
                 </div>

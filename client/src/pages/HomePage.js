@@ -1,19 +1,35 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FiArrowRight, FiTrendingUp, FiShield, FiTruck, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
+import api from '../utils/api';
 
 const HomePage = () => {
     const navigate = useNavigate();
     const scrollContainerRef = useRef(null);
-    const categories = [
-        'Electronics',
-        'Fashion',
-        'Home',
-        'Beauty',
-        'Sports'
-    ];
+    const [categories, setCategories] = useState([]);
+
+    // Fetch categories from the API instead of hardcoding
+    useEffect(() => {
+        const fetchCategories = async () => {
+            try {
+                const { data } = await api.get('/categories');
+                setCategories(data);
+            } catch (err) {
+                console.error('Failed to fetch categories', err);
+                // Fallback to prevent empty state
+                setCategories([
+                    { _id: 'fallback-1', name: 'Electronics' },
+                    { _id: 'fallback-2', name: 'Fashion' },
+                    { _id: 'fallback-3', name: 'Home & Furniture' },
+                    { _id: 'fallback-4', name: 'Beauty & Personal Care' },
+                    { _id: 'fallback-5', name: 'Sports & Fitness' },
+                ]);
+            }
+        };
+        fetchCategories();
+    }, []);
 
     const scroll = (direction) => {
         if (scrollContainerRef.current) {
@@ -116,7 +132,6 @@ const HomePage = () => {
                     <div className="text-9xl text-gray-200 font-bold opacity-30 select-none tracking-tighter">
                         APEX
                     </div>
-                    {/* Floating elements for modern look */}
                     <motion.div
                         animate={{ y: [0, -20, 0] }}
                         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
@@ -163,7 +178,7 @@ const HomePage = () => {
                 </div>
             </motion.div>
 
-            {/* Categories Preview */}
+            {/* Categories Preview — now driven by API data */}
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -206,19 +221,19 @@ const HomePage = () => {
                     >
                         {categories.map((cat, index) => (
                             <motion.div
-                                key={cat}
+                                key={cat._id}
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 transition={{ delay: index * 0.1 }}
                                 viewport={{ once: true }}
                                 whileHover={{ y: -10 }}
-                                onClick={() => navigate(`/products?category=${encodeURIComponent(cat)}`)}
+                                onClick={() => navigate(`/products?categoryId=${cat._id}`)}
                                 className="min-w-full md:min-w-[calc((100%-3rem)/3)] snap-center group relative h-72 rounded-2xl overflow-hidden cursor-pointer flex-shrink-0 shadow-sm hover:shadow-2xl transition-all duration-500"
                             >
                                 <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 group-hover:scale-110 transition-transform duration-700"></div>
                                 <div className="absolute inset-0 opacity-40 mix-blend-overlay bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
                                 <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-                                    <h3 className="text-2xl font-bold text-white mb-2 transform group-hover:scale-110 transition-transform duration-500">{cat}</h3>
+                                    <h3 className="text-2xl font-bold text-white mb-2 transform group-hover:scale-110 transition-transform duration-500">{cat.name}</h3>
                                     <div className="w-10 h-1 bg-primary-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center"></div>
                                     <p className="text-gray-400 mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-sm italic">Discover Collection</p>
                                 </div>

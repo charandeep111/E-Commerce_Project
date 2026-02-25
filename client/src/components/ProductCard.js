@@ -63,7 +63,7 @@ const ProductCard = ({ product }) => {
             </div>
             <div className="p-4 flex flex-col flex-grow">
                 <div className="mb-2">
-                    <p className="text-sm text-primary-600 font-medium mb-1">{product.category}</p>
+                    <p className="text-sm text-primary-600 font-medium mb-1">{product.categoryId?.name || product.category}</p>
                     <Link to={`/products/${product._id}`}>
                         <h3 className="text-lg font-bold text-gray-900 group-hover:text-primary-600 transition-colors line-clamp-2">
                             {product.title}

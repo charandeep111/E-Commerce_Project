@@ -13,26 +13,33 @@ app.use(express.json());
 // Connect to MongoDB
 connectDB();
 
-// Simple health‑check route
+// Simple health-check route
 app.get('/api/health', (req, res) => res.json({ status: 'OK' }));
 
+// ─── Routes ─────────────────────────────────────────────────────────
 const authRoutes = require('./src/routes/auth');
-app.use('/api/auth', authRoutes); // auth routes
+app.use('/api/auth', authRoutes);
+
+const categoryRoutes = require('./src/routes/category');
+app.use('/api/categories', categoryRoutes);
+
+const subcategoryRoutes = require('./src/routes/subcategory');
+app.use('/api/subcategories', subcategoryRoutes);
 
 const productRoutes = require('./src/routes/product');
-app.use('/api/products', productRoutes); // product CRUD routes
+app.use('/api/products', productRoutes);
 
 const cartRoutes = require('./src/routes/cart');
-app.use('/api/cart', cartRoutes); // cart routes
+app.use('/api/cart', cartRoutes);
 
 const orderRoutes = require('./src/routes/order');
-app.use('/api/orders', orderRoutes); // order routes
+app.use('/api/orders', orderRoutes);
 
 const reviewRoutes = require('./src/routes/review');
-app.use('/api/reviews', reviewRoutes); // review routes
+app.use('/api/reviews', reviewRoutes);
 
 const wishlistRoutes = require('./src/routes/wishlist');
-app.use('/api/wishlist', wishlistRoutes); // wishlist routes
+app.use('/api/wishlist', wishlistRoutes);
 
 const PORT = process.env.PORT || 5000;
 if (process.env.NODE_ENV !== 'production') {

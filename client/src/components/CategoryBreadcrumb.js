@@ -24,8 +24,8 @@ const CategoryBreadcrumb = ({ breadcrumb, onNavigate }) => {
                             }
                         }}
                         className={`transition-colors ${index === breadcrumb.length - 1
-                                ? 'text-gray-900 font-medium'
-                                : 'text-gray-500 hover:text-primary-600'
+                            ? 'text-gray-900 font-medium'
+                            : 'text-gray-500 hover:text-primary-600'
                             }`}
                     >
                         {item.name}

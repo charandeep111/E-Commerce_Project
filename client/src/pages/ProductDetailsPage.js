@@ -145,7 +145,7 @@ const ProductDetailsPage = () => {
                     transition={{ duration: 0.6 }}
                 >
                     <div className="mb-6">
-                        <span className="text-primary-600 font-medium tracking-wide text-sm">{product.category}</span>
+                        <span className="text-primary-600 font-medium tracking-wide text-sm">{product.categoryId?.name || product.category}</span>
                         <h1 className="text-4xl font-display font-bold text-gray-900 mt-2 mb-4">{product.title}</h1>
                         <p className="text-3xl font-bold text-gray-900">{formatPrice(product.price)}</p>
                     </div>
