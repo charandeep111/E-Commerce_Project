@@ -10,9 +10,9 @@ const HomePage = () => {
     const categories = [
         'Electronics',
         'Fashion',
-        'Home & Furniture',
-        'TV & Appliances',
-        'Mobiles & Tablets'
+        'Home',
+        'Beauty',
+        'Sports'
     ];
 
     const scroll = (direction) => {

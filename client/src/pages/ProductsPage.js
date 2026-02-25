@@ -9,7 +9,7 @@ import { FiFilter } from 'react-icons/fi';
 import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const DIRECT_PRODUCT_CATEGORIES = ['TV & Appliances', 'Mobiles & Tablets'];
+const DIRECT_PRODUCT_CATEGORIES = [];
 
 const ProductsPage = () => {
     const [searchParams, setSearchParams] = useSearchParams();
@@ -73,10 +73,10 @@ const ProductsPage = () => {
             if (!category) {
                 const landingCategories = [
                     'Electronics',
-                    'Home & Furniture',
                     'Fashion',
-                    'Mobiles & Tablets',
-                    'TV & Appliances'
+                    'Home',
+                    'Beauty',
+                    'Sports'
                 ];
                 items = items.filter(item => landingCategories.includes(item.name));
             }

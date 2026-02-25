@@ -15,6 +15,7 @@ const userSchema = new mongoose.Schema({
         storeName: { type: String },
         description: { type: String },
     },
+    wishlist: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Product' }],
 });
 
 // Hash password before saving

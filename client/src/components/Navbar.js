@@ -34,27 +34,32 @@ const Navbar = () => {
                     </motion.div>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden md:flex space-x-8 items-center">
-                        <Link to="/" className="text-gray-600 hover:text-primary-600 font-medium transition-colors">
-                            Home
-                        </Link>
-                        <Link to="/products" className="text-gray-600 hover:text-primary-600 font-medium transition-colors">
-                            Products
-                        </Link>
-                        {user && user.role === 'admin' && (
-                            <Link to="/admin" className="text-gray-600 hover:text-primary-600 font-medium transition-colors">
-                                Admin
-                            </Link>
-                        )}
-                        {user && user.role === 'vendor' && (
-                            <Link to="/vendor-dashboard" className="text-gray-600 hover:text-primary-600 font-medium transition-colors">
-                                Dashboard
-                            </Link>
-                        )}
+                    <div className="hidden md:flex flex-1 max-w-md mx-8">
+                        <div className="relative w-full">
+                            <input
+                                type="text"
+                                placeholder="Search products, brands..."
+                                onKeyDown={(e) => {
+                                    if (e.key === 'Enter') {
+                                        navigate(`/products?search=${encodeURIComponent(e.target.value)}`);
+                                    }
+                                }}
+                                className="w-full bg-gray-100 border-none rounded-full py-2 px-6 text-sm focus:ring-2 focus:ring-primary-500 transition-all outline-none"
+                            />
+                            <div className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400">
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                </svg>
+                            </div>
+                        </div>
                     </div>
 
                     {/* Right Side Icons */}
                     <div className="hidden md:flex items-center space-x-6">
+                        <Link to="/products" className="text-gray-600 hover:text-primary-600 font-medium transition-colors">
+                            Explore
+                        </Link>
+
                         <Link to="/cart" className="relative text-gray-600 hover:text-primary-600 transition-colors">
                             <FiShoppingCart className="h-6 w-6" />
                             <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full h-4 w-4 flex items-center justify-center">
@@ -74,6 +79,19 @@ const Navbar = () => {
                                         <Link to="/profile" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary-600">
                                             Profile
                                         </Link>
+                                        <Link to="/wishlist" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary-600">
+                                            My Wishlist
+                                        </Link>
+                                        {user && user.role === 'admin' && (
+                                            <Link to="/admin" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary-600">
+                                                Admin Panel
+                                            </Link>
+                                        )}
+                                        {user && user.role === 'vendor' && (
+                                            <Link to="/vendor-dashboard" className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary-600">
+                                                Vendor Dashboard
+                                            </Link>
+                                        )}
                                         <button
                                             onClick={handleLogout}
                                             className="w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-red-600 flex items-center space-x-2"

@@ -1,12 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FiShoppingCart } from 'react-icons/fi';
+import { FiShoppingCart, FiHeart } from 'react-icons/fi';
 import { useCart } from '../context/CartContext';
+import { useWishlist } from '../context/WishlistContext';
 import { formatPrice } from '../utils/formatPrice';
 import { motion } from 'framer-motion';
 
 const ProductCard = ({ product }) => {
     const { addToCart } = useCart();
+    const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
+
+    const isWishlisted = isInWishlist(product._id);
+
+    const toggleWishlist = (e) => {
+        e.preventDefault();
+        if (isWishlisted) {
+            removeFromWishlist(product._id);
+        } else {
+            addToWishlist(product);
+        }
+    };
 
     const imageUrl = product.images && product.images.length > 0
         ? product.images[0].url
@@ -20,20 +33,34 @@ const ProductCard = ({ product }) => {
             transition={{ duration: 0.3 }}
             className="group relative bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 flex flex-col h-full"
         >
-            <Link to={`/products/${product._id}`} className="block relative aspect-w-1 aspect-h-1 overflow-hidden bg-gray-200">
-                <motion.img
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ duration: 0.6 }}
-                    src={imageUrl}
-                    alt={product.title}
-                    className="w-full h-60 object-cover object-center"
-                />
+            <div className="block relative aspect-w-1 aspect-h-1 overflow-hidden bg-gray-200">
+                <Link to={`/products/${product._id}`}>
+                    <motion.img
+                        whileHover={{ scale: 1.1 }}
+                        transition={{ duration: 0.6 }}
+                        src={imageUrl}
+                        alt={product.title}
+                        className="w-full h-60 object-cover object-center"
+                    />
+                </Link>
+                <div className="absolute top-2 right-2 flex flex-col gap-2">
+                    <motion.button
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                        onClick={toggleWishlist}
+                        className={`p-2 rounded-full shadow-md transition-colors ${isWishlisted ? 'bg-red-500 text-white' : 'bg-white text-gray-400 hover:text-red-500'
+                            }`}
+                        title={isWishlisted ? "Remove from Wishlist" : "Add to Wishlist"}
+                    >
+                        <FiHeart className={`h-4 w-4 ${isWishlisted ? 'fill-current' : ''}`} />
+                    </motion.button>
+                </div>
                 {product.stock <= 0 && (
-                    <div className="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
+                    <div className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
                         Out of Stock
                     </div>
                 )}
-            </Link>
+            </div>
             <div className="p-4 flex flex-col flex-grow">
                 <div className="mb-2">
                     <p className="text-sm text-primary-600 font-medium mb-1">{product.category}</p>

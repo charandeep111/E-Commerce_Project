@@ -31,6 +31,9 @@ app.use('/api/orders', orderRoutes); // order routes
 const reviewRoutes = require('./src/routes/review');
 app.use('/api/reviews', reviewRoutes); // review routes
 
+const wishlistRoutes = require('./src/routes/wishlist');
+app.use('/api/wishlist', wishlistRoutes); // wishlist routes
+
 const PORT = process.env.PORT || 5000;
 if (process.env.NODE_ENV !== 'production') {
     app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

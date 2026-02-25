@@ -6,7 +6,7 @@ const {
     findProductTypeByKey
 } = require('../config/categoryHierarchy');
 
-const DIRECT_PRODUCT_CATEGORIES = ['TV & Appliances', 'Mobiles & Tablets'];
+const DIRECT_PRODUCT_CATEGORIES = [];
 
 exports.createProduct = async (req, res) => {
     try {
