@@ -4,7 +4,6 @@ import api from '../utils/api';
 import ProductCard from '../components/ProductCard';
 import CategoryBreadcrumb from '../components/CategoryBreadcrumb';
 import CategoryGrid from '../components/CategoryGrid';
-import RelatedProducts from '../components/RelatedProducts';
 import { FiFilter } from 'react-icons/fi';
 import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -63,24 +62,6 @@ const ProductsPage = () => {
 
             // THE KEY ENDPOINT — only returns products for THIS subcategoryId
             const { data } = await api.get(`/subcategories/${subcategoryId}/products${query}`);
-            setProducts(data.products || []);
-        } catch (err) {
-            setError('Failed to load products');
-            console.error(err);
-        } finally {
-            setLoading(false);
-        }
-    }, [sort, search]);
-
-    // ─── Fetch all products for a category ───────────────────────────
-    const fetchCategoryProducts = useCallback(async (categoryId) => {
-        try {
-            setLoading(true);
-            let query = `?`;
-            if (sort && sort !== 'newest') query += `sort=${sort}&`;
-            if (search) query += `search=${encodeURIComponent(search)}&`;
-
-            const { data } = await api.get(`/categories/${categoryId}/products${query}`);
             setProducts(data.products || []);
         } catch (err) {
             setError('Failed to load products');
