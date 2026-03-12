@@ -16,7 +16,9 @@ const RegisterPage = () => {
         try {
             setError('');
             await register({ name, email, password, role });
-            navigate('/');
+            const params = new URLSearchParams(window.location.search);
+            const redirect = params.get('redirect');
+            navigate(redirect || '/');
         } catch (err) {
             setError(err.response?.data?.msg || 'Failed to register');
         }

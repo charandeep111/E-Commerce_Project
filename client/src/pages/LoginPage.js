@@ -14,7 +14,9 @@ const LoginPage = () => {
         try {
             setError('');
             await login(email, password);
-            navigate('/');
+            const params = new URLSearchParams(window.location.search);
+            const redirect = params.get('redirect');
+            navigate(redirect || '/');
         } catch (err) {
             setError(err.response?.data?.msg || 'Failed to login');
         }
