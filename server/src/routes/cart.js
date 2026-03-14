@@ -15,8 +15,8 @@ router.use(protect, authorize('customer'));
 
 router.get('/', getCart);
 router.post('/add', addToCart);
+router.post('/remove', removeFromCart); // Changed from DELETE to POST as per prompt
 router.put('/update', updateCartItem);
-router.delete('/remove/:productId', removeFromCart);
 router.delete('/clear', clearCart);
 
 module.exports = router;

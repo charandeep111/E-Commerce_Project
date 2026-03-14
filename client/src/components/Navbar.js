@@ -41,7 +41,7 @@ const Navbar = () => {
                                 placeholder="Search products, brands..."
                                 onKeyDown={(e) => {
                                     if (e.key === 'Enter') {
-                                        navigate(`/products?search=${encodeURIComponent(e.target.value)}`);
+                                        navigate(`/search?q=${encodeURIComponent(e.target.value)}`);
                                     }
                                 }}
                                 className="w-full bg-gray-100 border-none rounded-full py-2 px-6 text-sm focus:ring-2 focus:ring-primary-500 transition-all outline-none"

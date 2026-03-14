@@ -15,7 +15,14 @@ const generateToken = (user) => {
 // @route  POST /api/auth/register
 // @access Public
 exports.register = async (req, res) => {
-    const { name, email, password, role, vendorDetails } = req.body;
+    let { name, email, password, role, vendorDetails } = req.body;
+    
+    if (!email || !password) {
+        return res.status(400).json({ msg: 'Please provide email and password' });
+    }
+
+    email = email.toLowerCase().trim();
+
     if (!['customer', 'vendor'].includes(role)) {
         return res.status(400).json({ msg: 'Invalid role' });
     }
@@ -28,8 +35,8 @@ exports.register = async (req, res) => {
         if (err.code === 11000) {
             return res.status(400).json({ msg: 'Email already exists' });
         }
-        console.error('Registration Error Details:', err);
-        res.status(500).json({ msg: 'Server error: ' + err.message });
+        console.error('Registration Error:', err);
+        res.status(500).json({ msg: 'Server error' });
     }
 };
 
@@ -37,17 +44,22 @@ exports.register = async (req, res) => {
 // @route  POST /api/auth/login
 // @access Public
 exports.login = async (req, res) => {
-    const { email, password } = req.body;
+    const email = req.body.email?.toLowerCase().trim();
+    const { password } = req.body;
+
     try {
         const user = await User.findOne({ email });
-        if (!user) return res.status(401).json({ msg: 'Invalid credentials' });
+        if (!user) {
+            return res.status(401).json({ msg: 'Invalid credentials' });
+        }
         const isMatch = await user.comparePassword(password);
         if (!isMatch) return res.status(401).json({ msg: 'Invalid credentials' });
+        
         const token = generateToken(user);
         res.json({ token, user: { id: user._id, name: user.name, email, role: user.role } });
     } catch (err) {
-        console.error('Login Error Details:', err);
-        res.status(500).json({ msg: 'Server error: ' + err.message });
+        console.error('Login Error:', err);
+        res.status(500).json({ msg: 'Server error' });
     }
 };
 // @desc   Get current user profile

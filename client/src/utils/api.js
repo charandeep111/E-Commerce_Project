@@ -1,10 +1,10 @@
 import axios from 'axios';
 
 const API_URL =
-    process.env.REACT_APP_API_URL ||
+    process.env.REACT_APP_API_URL || // Priority 1: Environment Variable
     (process.env.NODE_ENV === 'production'
-        ? 'https://e-commerce-project-2-i5rf.onrender.com/api'
-        : 'http://localhost:5000/api');
+        ? 'https://e-commerce-project-2-i5rf.onrender.com/api' // Priority 2: Deployed Render Backend
+        : 'http://localhost:5000/api'); // Priority 3: Local Development
 
 const api = axios.create({
     baseURL: API_URL,

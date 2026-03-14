@@ -22,7 +22,7 @@ const ProductCard = ({ product }) => {
     };
 
     const imageUrl = product.images && product.images.length > 0
-        ? product.images[0].url
+        ? (product.images[0]?.url || product.images[0])
         : 'https://placehold.co/400x400?text=No+Image';
 
     return (

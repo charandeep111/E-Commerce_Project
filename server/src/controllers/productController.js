@@ -69,7 +69,11 @@ exports.getProducts = async (req, res) => {
         if (productType) filter.productType = productType;
         if (brand) filter.brand = brand;
         if (search) {
-            filter.title = { $regex: search, $options: 'i' };
+            filter.$or = [
+                { title: { $regex: search, $options: 'i' } },
+                { description: { $regex: search, $options: 'i' } },
+                { category: { $regex: search, $options: 'i' } }
+            ];
         }
 
         if (minPrice || maxPrice) {
@@ -99,6 +103,70 @@ exports.getProducts = async (req, res) => {
     }
 };
 
+exports.searchProducts = async (req, res) => {
+    try {
+        const { q } = req.query;
+        if (!q) {
+            return res.status(400).json({ msg: 'Search query is required' });
+        }
+
+        // Build regex for case-insensitive partial matching
+        const regex = new RegExp(q, 'i');
+
+        const filter = {
+            $or: [
+                { title: regex },
+                { description: regex },
+                { category: regex }
+            ]
+        };
+
+        const products = await Product.find(filter)
+            .populate('vendorId', 'name')
+            .lean(); // Faster processing
+
+        // Rank results by relevance
+        const rankedProducts = products.map(prod => {
+            let score = 0;
+            const titleMatch = prod.title.match(regex);
+            const categoryMatch = prod.category?.match(regex);
+            
+            if (titleMatch) {
+                // Exact name matches get highest score
+                if (prod.title.toLowerCase() === q.toLowerCase()) {
+                    score += 100;
+                } else {
+                    // Partial title match
+                    score += 50;
+                }
+            }
+            if (categoryMatch) {
+                // Category matches get good score
+                if (prod.category.toLowerCase() === q.toLowerCase()) {
+                    score += 80;
+                } else {
+                    score += 30;
+                }
+            }
+            // Description matches are lowest priority but still count (no extra points beyond keeping it in the array, maybe small boost)
+            if (prod.description?.match(regex)) score += 10;
+
+            return { ...prod, relevanceScore: score };
+        });
+
+        // Sort by relevance (highest first) and limit to top 10
+        rankedProducts.sort((a, b) => b.relevanceScore - a.relevanceScore);
+        
+        // Take top 10 and resolve images
+        const topResults = rankedProducts.slice(0, 10).map(resolveProductImagesFromDoc);
+        
+        res.json(topResults);
+    } catch (err) {
+        console.error('Search error:', err);
+        res.status(500).json({ msg: 'Server error' });
+    }
+};
+
 exports.getProductsWithRelated = async (req, res) => {
     try {
         const { category, subCategory, productType, brand, minPrice, maxPrice, sort, page = 1, limit = 20, search } = req.query;
@@ -109,7 +177,11 @@ exports.getProductsWithRelated = async (req, res) => {
         if (productType) filter.productType = productType;
         if (brand) filter.brand = brand;
         if (search) {
-            filter.title = { $regex: search, $options: 'i' };
+            filter.$or = [
+                { title: { $regex: search, $options: 'i' } },
+                { description: { $regex: search, $options: 'i' } },
+                { category: { $regex: search, $options: 'i' } }
+            ];
         }
 
         if (minPrice || maxPrice) {

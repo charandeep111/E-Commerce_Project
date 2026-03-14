@@ -8,10 +8,10 @@ const orderItemSchema = new mongoose.Schema({
 });
 
 const orderSchema = new mongoose.Schema({
-    customerId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
-    vendorId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true }, // vendor owning the product(s)
-    items: [orderItemSchema],
-    totalAmount: { type: Number, required: true },
+    userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+    vendorId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }, // vendor owning the product(s)
+    products: [orderItemSchema],
+    totalPrice: { type: Number, required: true },
     status: {
         type: String,
         enum: ['pending', 'packed', 'shipped', 'delivered', 'cancelled'],

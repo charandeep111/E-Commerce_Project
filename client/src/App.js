@@ -16,6 +16,8 @@ import AdminDashboard from './pages/AdminDashboard';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import WishlistPage from './pages/WishlistPage';
+import SearchPage from './pages/SearchPage';
+import CheckoutPage from './pages/CheckoutPage';
 import { HelmetProvider } from 'react-helmet-async';
 import { Toaster } from 'react-hot-toast';
 import './App.css';
@@ -48,6 +50,15 @@ function App() {
                     } 
                   />
                   <Route path="/cart" element={<CartPage />} />
+                  <Route path="/search" element={<SearchPage />} />
+                  <Route 
+                    path="/checkout" 
+                    element={
+                      <ProtectedRoute>
+                        <CheckoutPage />
+                      </ProtectedRoute>
+                    } 
+                  />
                   <Route path="/order-success" element={<OrderSuccessPage />} />
                   <Route 
                     path="/profile" 

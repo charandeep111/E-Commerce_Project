@@ -3,15 +3,17 @@ const express = require('express');
 const router = express.Router();
 const { protect, authorize } = require('../middlewares/authMiddleware');
 const {
-    checkout,
-    getMyOrders,
+    createOrder,
+    getUserOrders,
     getVendorOrders,
     getAllOrders,
 } = require('../controllers/orderController');
 
-// Checkout – customer only
-router.post('/checkout', protect, authorize('customer'), checkout);
-router.get('/myorders', protect, authorize('customer'), getMyOrders);
+// Create order
+router.post('/create', protect, createOrder);
+
+// Get user orders
+router.get('/user', protect, getUserOrders);
 
 // Vendor can view own orders
 router.get('/vendor', protect, authorize('vendor'), getVendorOrders);

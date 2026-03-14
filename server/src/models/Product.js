@@ -11,17 +11,17 @@ const productSchema = new mongoose.Schema({
     categoryId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Category',
-        required: [true, 'Category is required'],
+        required: false, // Made optional for more flexible string-based filtering
     },
     subcategoryId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Subcategory',
-        required: [true, 'Subcategory is required'],
+        required: false, // Made optional
     },
 
     // Keep legacy string fields for backward compat (read-only, populated by seed)
-    category: { type: String },
-    subCategory: { type: String },
+    category: { type: String, index: true },
+    subCategory: { type: String, index: true },
 
     brand: { type: String },
     productType: { type: String },
@@ -35,5 +35,6 @@ const productSchema = new mongoose.Schema({
 productSchema.index({ categoryId: 1 });
 productSchema.index({ subcategoryId: 1 });
 productSchema.index({ categoryId: 1, subcategoryId: 1 });
+productSchema.index({ title: 'text', description: 'text' });
 
 module.exports = mongoose.model('Product', productSchema);

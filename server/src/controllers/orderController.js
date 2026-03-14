@@ -1,79 +1,54 @@
-// src/controllers/orderController.js – Order handling (checkout, vendor view, admin view)
 const Order = require('../models/Order');
-const Cart = require('../models/Cart');
+const User = require('../models/User');
 const Product = require('../models/Product');
 
-// Helper to calculate total and build order items from cart
-const buildOrderFromCart = async (cart, customerId) => {
-    const items = [];
-    let total = 0;
-    for (const ci of cart.items) {
-        const product = await Product.findById(ci.product);
-        if (!product) continue; // skip missing product
-        const price = product.price;
-        const quantity = ci.quantity;
-        items.push({ product: product._id, quantity, price });
-        total += price * quantity;
-    }
-    // Assume all items belong to the same vendor for simplicity; pick first product's vendor
-    const vendorId = items.length ? items[0].product.vendorId : null;
-    return { items, total, vendorId };
-};
-
-// @desc   Checkout – create order(s) from customer's cart
-// @route  POST /api/orders/checkout
-// @access Protected (customer)
-exports.checkout = async (req, res) => {
+// @desc   Create an order from user's cart
+// @route  POST /api/orders/create
+// @access Protected
+exports.createOrder = async (req, res) => {
     try {
-        const cart = await Cart.findOne({ customerId: req.user.id });
-        if (!cart || !cart.items.length) return res.status(400).json({ msg: 'Cart is empty' });
+        const user = await User.findById(req.user.id);
+        if (!user || !user.cart.length) return res.status(400).json({ msg: 'Cart is empty' });
 
-        // Group items by vendor
-        const ordersPayload = {}; // vendorId -> { items: [], total: 0 }
+        let totalPrice = 0;
+        const productsInfo = [];
 
-        for (const ci of cart.items) {
-            const product = await Product.findById(ci.product);
-            if (!product) continue; // skip missing product
+        // Build product list and total price
+        for (const item of user.cart) {
+            const product = await Product.findById(item.productId);
+            if (!product) continue;
 
-            const vendorId = product.vendorId.toString();
-            if (!ordersPayload[vendorId]) {
-                ordersPayload[vendorId] = { items: [], total: 0, vendorId: product.vendorId };
-            }
+            const quantity = item.quantity;
+            const price = product.price;
 
-            const quantity = ci.quantity;
-            const price = product.price; // snapshot price
-
-            ordersPayload[vendorId].items.push({
+            productsInfo.push({
                 product: product._id,
                 quantity,
                 price
             });
-            ordersPayload[vendorId].total += price * quantity;
+            totalPrice += price * quantity;
         }
 
-        const createdOrders = [];
-        for (const vid in ordersPayload) {
-            const payload = ordersPayload[vid];
-            if (payload.items.length === 0) continue;
-
-            const order = new Order({
-                customerId: req.user.id,
-                vendorId: payload.vendorId,
-                items: payload.items,
-                totalAmount: payload.total,
-            });
-            await order.save();
-            createdOrders.push(order);
-        }
-
-        if (createdOrders.length === 0) {
+        if (productsInfo.length === 0) {
             return res.status(400).json({ msg: 'No valid products to order' });
         }
 
-        // Clear cart after successful order
-        await Cart.findOneAndDelete({ customerId: req.user.id });
+        const vendorId = productsInfo[0].vendorId || null; // simplification if needed
 
-        res.status(201).json({ msg: 'Orders placed successfully', orders: createdOrders });
+        const order = new Order({
+            userId: req.user.id,
+            vendorId: vendorId,
+            products: productsInfo,
+            totalPrice: totalPrice,
+        });
+
+        await order.save();
+
+        // Clear user's cart
+        user.cart = [];
+        await user.save();
+
+        res.status(201).json({ msg: 'Order placed successfully', order });
     } catch (err) {
         console.error(err);
         res.status(500).json({ msg: 'Server error' });
@@ -81,12 +56,12 @@ exports.checkout = async (req, res) => {
 };
 
 // @desc   Get logged in customer's orders
-// @route  GET /api/orders/myorders
+// @route  GET /api/orders/user
 // @access Protected (customer)
-exports.getMyOrders = async (req, res) => {
+exports.getUserOrders = async (req, res) => {
     try {
-        const orders = await Order.find({ customerId: req.user.id })
-            .populate('items.product', 'title price images')
+        const orders = await Order.find({ userId: req.user.id })
+            .populate('products.product', 'title price images')
             .sort({ createdAt: -1 });
         res.json(orders);
     } catch (err) {
@@ -101,8 +76,8 @@ exports.getMyOrders = async (req, res) => {
 exports.getVendorOrders = async (req, res) => {
     try {
         const orders = await Order.find({ vendorId: req.user.id })
-            .populate('customerId', 'name email')
-            .populate('items.product', 'title price');
+            .populate('userId', 'name email')
+            .populate('products.product', 'title price');
         res.json(orders);
     } catch (err) {
         console.error(err);
@@ -116,9 +91,9 @@ exports.getVendorOrders = async (req, res) => {
 exports.getAllOrders = async (req, res) => {
     try {
         const orders = await Order.find()
-            .populate('customerId', 'name email')
+            .populate('userId', 'name email')
             .populate('vendorId', 'name email')
-            .populate('items.product', 'title price');
+            .populate('products.product', 'title price');
         res.json(orders);
     } catch (err) {
         console.error(err);

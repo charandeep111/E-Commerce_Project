@@ -1,25 +1,13 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import { FiTrash2, FiMinus, FiPlus, FiArrowLeft } from 'react-icons/fi';
-import { useState } from 'react';
 import { formatPrice } from '../utils/formatPrice';
 import { motion, AnimatePresence } from 'framer-motion';
-import toast from 'react-hot-toast';
 
 const CartPage = () => {
     const { cart, loading, updateCartItem, removeFromCart, cartTotal, clearCart } = useCart();
     const navigate = useNavigate();
-    const [isCheckingOut, setIsCheckingOut] = useState(false);
 
-    const handleCheckout = async () => {
-        setIsCheckingOut(true);
-        setTimeout(() => {
-            clearCart();
-            setIsCheckingOut(false);
-            navigate('/products');
-            toast.success("Order placed successfully! (Demo Only)");
-        }, 1500);
-    };
 
     if (loading && (!cart || !cart.items)) {
         return (
@@ -161,17 +149,10 @@ const CartPage = () => {
                         <motion.button
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
-                            onClick={handleCheckout}
-                            disabled={isCheckingOut}
-                            className="w-full bg-gray-900 text-white rounded-xl py-5 px-6 font-bold hover:bg-black transition-all shadow-xl shadow-gray-900/20 disabled:opacity-70 disabled:cursor-not-allowed flex justify-center items-center gap-3"
+                            onClick={() => navigate('/checkout')}
+                            className="w-full bg-gray-900 text-white rounded-xl py-5 px-6 font-bold hover:bg-black transition-all shadow-xl shadow-gray-900/20 flex justify-center items-center gap-3"
                         >
-                            {isCheckingOut ? (
-                                <div className="animate-spin rounded-full h-5 w-5 border-t-2 border-b-2 border-white"></div>
-                            ) : (
-                                <>
-                                    <span>Proceed to Checkout</span>
-                                </>
-                            )}
+                            <span>Proceed to Checkout</span>
                         </motion.button>
                         <div className="mt-8 pt-8 border-t border-gray-50 text-center">
                             <p className="text-xs text-gray-400 leading-relaxed">

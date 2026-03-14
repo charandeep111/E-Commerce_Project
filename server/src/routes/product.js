@@ -12,10 +12,12 @@ const {
     deleteProduct,
     getVendorProducts,
     getBrands,
-    getRelatedProducts
+    getRelatedProducts,
+    searchProducts
 } = require('../controllers/productController');
 
 router.get('/', getProducts);
+router.get('/search', searchProducts);
 router.get('/with-related', getProductsWithRelated);
 router.get('/navigation', getCategoryNavigation);
 router.get('/brands', getBrands);

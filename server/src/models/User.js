@@ -16,6 +16,12 @@ const userSchema = new mongoose.Schema({
         description: { type: String },
     },
     wishlist: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Product' }],
+    cart: [
+        {
+            productId: { type: mongoose.Schema.Types.ObjectId, ref: 'Product', required: true },
+            quantity: { type: Number, default: 1, min: 1 }
+        }
+    ],
 });
 
 // Hash password before saving

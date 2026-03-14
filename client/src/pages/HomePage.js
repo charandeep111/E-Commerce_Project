@@ -4,6 +4,7 @@ import { FiArrowRight, FiTrendingUp, FiShield, FiTruck, FiChevronLeft, FiChevron
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import api from '../utils/api';
+import ShoppingCopilot from '../components/ShoppingCopilot';
 
 const HomePage = () => {
     const navigate = useNavigate();
@@ -144,6 +145,9 @@ const HomePage = () => {
                     />
                 </motion.div>
             </div>
+
+            {/* Shopping Copilot Section */}
+            <ShoppingCopilot />
 
             {/* Features Section */}
             <motion.div

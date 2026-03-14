@@ -23,6 +23,7 @@ const ProductsPage = () => {
     // Filters
     const [sort, setSort] = useState('newest');
     const [search, setSearch] = useState(searchParams.get('search') || '');
+    const [activeCategory, setActiveCategory] = useState(searchParams.get('category') || null);
 
     // Determine what level we're at
     const currentLevel = selectedSubcategory ? 'products' : selectedCategory ? 'subcategories' : 'categories';
@@ -52,17 +53,23 @@ const ProductsPage = () => {
         }
     }, []);
 
-    // ─── Fetch products for a specific subcategory ───────────────────
-    const fetchProducts = useCallback(async (subcategoryId) => {
+    // ─── Fetch products ───────────────────
+    const fetchProducts = useCallback(async (params = {}) => {
         try {
             setLoading(true);
             let query = `?`;
             if (sort && sort !== 'newest') query += `sort=${sort}&`;
             if (search) query += `search=${encodeURIComponent(search)}&`;
+            if (params.category) query += `category=${encodeURIComponent(params.category)}&`;
 
-            // THE KEY ENDPOINT — only returns products for THIS subcategoryId
-            const { data } = await api.get(`/subcategories/${subcategoryId}/products${query}`);
-            setProducts(data.products || []);
+            let endpoint = '/products';
+            if (params.subcategoryId) {
+                endpoint = `/subcategories/${params.subcategoryId}/products`;
+            }
+
+            const { data } = await api.get(`${endpoint}${query}`);
+            // Handle both object and array responses
+            setProducts(data.products || (Array.isArray(data) ? data : []));
         } catch (err) {
             setError('Failed to load products');
             console.error(err);
@@ -121,9 +128,11 @@ const ProductsPage = () => {
     // ─── Refetch products when sort/search changes ───────────────────
     useEffect(() => {
         if (selectedSubcategory) {
-            fetchProducts(selectedSubcategory._id);
+            fetchProducts({ subcategoryId: selectedSubcategory._id });
+        } else if (activeCategory) {
+            fetchProducts({ category: activeCategory });
         }
-    }, [sort, search, selectedSubcategory, fetchProducts]);
+    }, [sort, search, selectedSubcategory, activeCategory, fetchProducts]);
 
     // ─── Navigation handlers ─────────────────────────────────────────
     const handleCategoryClick = (category) => {
@@ -150,7 +159,7 @@ const ProductsPage = () => {
         params.set('subcategoryId', subcategory._id);
         setSearchParams(params);
 
-        fetchProducts(subcategory._id);
+        fetchProducts({ subcategoryId: subcategory._id });
     };
 
     const handleBreadcrumbNavigate = (level) => {
@@ -174,10 +183,35 @@ const ProductsPage = () => {
         }
     };
 
+    const handleCategoryFilterClick = (catName) => {
+        if (activeCategory === catName) {
+            // Toggle off
+            clearFilters();
+        } else {
+            // Find the full category object from the categories array
+            const catObj = categories.find(c => c.name === catName);
+            if (catObj) {
+                // Use the proper ObjectId-based flow (same as clicking a category card)
+                setActiveCategory(null);
+                setSelectedCategory(catObj);
+                setSelectedSubcategory(null);
+                setProducts([]);
+                setError('');
+
+                const params = new URLSearchParams();
+                params.set('categoryId', catObj._id);
+                setSearchParams(params);
+
+                fetchSubcategories(catObj._id);
+            }
+        }
+    };
+
     const clearFilters = () => {
         setSearchParams({});
         setSelectedCategory(null);
         setSelectedSubcategory(null);
+        setActiveCategory(null);
         setProducts([]);
         setSubcategories([]);
         setSearch('');
@@ -235,6 +269,28 @@ const ProductsPage = () => {
                         <div className="flex items-center justify-between mb-4">
                             <h3 className="text-lg font-bold text-gray-900 font-display">Filters</h3>
                             <button onClick={clearFilters} className="text-xs text-primary-600 hover:text-primary-800">Clear All</button>
+                        </div>
+
+                        <div className="mb-6">
+                            <h4 className="font-medium text-gray-700 mb-3">Categories</h4>
+                            <div className="space-y-2">
+                                {categories.map((cat) => (
+                                    <button
+                                        key={cat._id}
+                                        onClick={() => handleCategoryFilterClick(cat.name)}
+                                        className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-all ${
+                                            selectedCategory && selectedCategory._id === cat._id
+                                                ? 'bg-primary-50 text-primary-700 font-semibold border border-primary-100 shadow-sm'
+                                                : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                                        }`}
+                                    >
+                                        <div className="flex items-center justify-between">
+                                            <span>{cat.name}</span>
+                                            {selectedCategory && selectedCategory._id === cat._id && <div className="w-1.5 h-1.5 rounded-full bg-primary-600"></div>}
+                                        </div>
+                                    </button>
+                                ))}
+                            </div>
                         </div>
 
                         {showProducts && (
@@ -300,15 +356,22 @@ const ProductsPage = () => {
 
                     {/* Level: Subcategories */}
                     {currentLevel === 'subcategories' && !loading && (
-                        <CategoryGrid
-                            items={subcategories.map(sub => ({
-                                ...sub,
-                                type: 'subCategory',
-                                hasChildren: true,
-                            }))}
-                            level="subCategory"
-                            onItemClick={(item) => handleSubcategoryClick(item)}
-                        />
+                        subcategories.length > 0 ? (
+                            <CategoryGrid
+                                items={subcategories.map(sub => ({
+                                    ...sub,
+                                    type: 'subCategory',
+                                    hasChildren: false, // Clicking a subcategory leads to products, not more categories
+                                }))}
+                                level="subCategory"
+                                onItemClick={(item) => handleSubcategoryClick(item)}
+                            />
+                        ) : (
+                            <div className="text-center py-12 bg-gray-50 rounded-xl border border-dashed border-gray-200">
+                                <p className="text-gray-500">No subcategories available for this category.</p>
+                                <button onClick={() => handleBreadcrumbNavigate('root')} className="mt-2 text-primary-600 underline">Back to All Categories</button>
+                            </div>
+                        )
                     )}
 
                     {/* Level: Products */}
@@ -325,10 +388,7 @@ const ProductsPage = () => {
                                 </div>
                             ) : products.length === 0 ? (
                                 <div className="text-center py-12 bg-gray-50 rounded-xl border border-dashed border-gray-200">
-                                    <p className="text-gray-500">No products found in this subcategory.</p>
-                                    <button onClick={() => handleBreadcrumbNavigate('category')} className="mt-2 text-primary-600 font-medium hover:underline">
-                                        Browse other subcategories
-                                    </button>
+                                    <p className="text-gray-500">No products available yet. Please add products from the admin panel.</p>
                                 </div>
                             ) : (
                                 <motion.div
@@ -354,7 +414,7 @@ const ProductsPage = () => {
 
                     {currentLevel === 'categories' && categories.length === 0 && !loading && (
                         <div className="text-center py-12 bg-gray-50 rounded-xl border border-dashed border-gray-200">
-                            <p className="text-gray-500">No categories found. Please run the seed script.</p>
+                            <p className="text-gray-500">No categories found. Please add categories and products from the admin panel.</p>
                         </div>
                     )}
                 </div>

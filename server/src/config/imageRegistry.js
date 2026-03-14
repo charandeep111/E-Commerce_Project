@@ -222,6 +222,14 @@ const getImagesForProductType = (productType, brand) => {
 
 const resolveProductImages = (product) => {
     if (!product) return product;
+    
+    // If product already has images (e.g. uploaded by vendor), don't overwrite them
+    if (product.images && product.images.length > 0) {
+        // Optional: Check if the images are placeholders and only then overwrite
+        const isPlaceholder = product.images.some(img => img.public_id === 'placeholder' || img.url?.includes('via.placeholder.com'));
+        if (!isPlaceholder) return product;
+    }
+
     const productType = product.productType;
     const brand = product.brand;
     const images = getImagesForProductType(productType, brand);
