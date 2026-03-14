@@ -15,6 +15,7 @@ const RegisterPage = () => {
         e.preventDefault();
         try {
             setError('');
+            console.log('Attempting registration...');
             await register({ name, email, password, role });
             const params = new URLSearchParams(window.location.search);
             const redirect = params.get('redirect');

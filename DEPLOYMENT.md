@@ -16,7 +16,7 @@ This project follows a **Decoupled Client-Server Architecture**:
 2.  **Frontend (React Client):**
     *   **Hosted on:** [Vercel](https://vercel.com)
     *   **Role:** User interface, state management, and calling the API.
-    *   **API Configuration:** Found in `client/src/utils/api.js`.
+    *   **API Configuration:** Found in `client/src/utils/api.js`. It now uses a relative path `/api` in production, which means it will automatically talk to your Vercel backend. If you prefer to use your Render backend instead, you can set the `REACT_APP_API_URL` environment variable in Vercel to your Render URL.
 
 ---
 

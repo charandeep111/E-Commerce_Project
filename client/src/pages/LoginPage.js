@@ -13,6 +13,10 @@ const LoginPage = () => {
         e.preventDefault();
         try {
             setError('');
+            console.log('Attempting login...');
+            // Assuming the login function internally hits an auth URL.
+            // If you want to log the specific URL, you'd need to modify the `login` function in AuthContext.
+            // For now, this log indicates the start of the auth process.
             await login(email, password);
             const params = new URLSearchParams(window.location.search);
             const redirect = params.get('redirect');
