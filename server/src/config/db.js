@@ -1,12 +1,13 @@
 // src/config/db.js – MongoDB connection helper
 const mongoose = require('mongoose');
+mongoose.set('strictQuery', false);
 
 const connectDB = async () => {
-    const uri = process.env.MONGODB_URI;
+    const uri = process.env.MONGODB_URI || process.env.MONGO_URI;
     console.log('Attempting to connect to MongoDB with URI:', uri ? 'URI provided (masked)' : 'URI MISSING');
 
     if (!uri) {
-        console.error('CRITICAL: MONGODB_URI is not defined in environment variables.');
+        console.error('CRITICAL: MONGODB_URI/MONGO_URI is not defined in environment variables.');
         return;
     }
 
