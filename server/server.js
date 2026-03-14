@@ -7,8 +7,20 @@ const connectDB = require('./src/config/db');
 dotenv.config();
 
 const app = express();
-app.use(cors());
+
+const corsOptions = {
+    origin: process.env.CLIENT_URL || '*',
+    credentials: process.env.CLIENT_URL ? true : false,
+    optionsSuccessStatus: 200
+};
+app.use(cors(corsOptions));
 app.use(express.json());
+
+// Log incoming requests
+app.use((req, res, next) => {
+    console.log(`${req.method} ${req.url}`);
+    next();
+});
 
 // Connect to MongoDB
 connectDB();
@@ -41,9 +53,10 @@ app.use('/api/reviews', reviewRoutes);
 const wishlistRoutes = require('./src/routes/wishlist');
 app.use('/api/wishlist', wishlistRoutes);
 
+const copilotRoutes = require('./src/routes/copilot');
+app.use('/api/copilot', copilotRoutes);
+
 const PORT = process.env.PORT || 5000;
-if (process.env.NODE_ENV !== 'production') {
-    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-}
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
 module.exports = app;
