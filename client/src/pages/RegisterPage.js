@@ -18,7 +18,7 @@ const RegisterPage = () => {
             await register({ name, email, password, role });
             const params = new URLSearchParams(window.location.search);
             const redirect = params.get('redirect');
-            navigate(redirect || '/');
+            navigate(redirect || '/home');
         } catch (err) {
             if (err.response) {
                 // Server responded with an error (4xx, 5xx)

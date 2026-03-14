@@ -15,6 +15,7 @@ import VendorDashboard from './pages/VendorDashboard';
 import AdminDashboard from './pages/AdminDashboard';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
+import Home from './pages/Home';
 import WishlistPage from './pages/WishlistPage';
 import SearchPage from './pages/SearchPage';
 import CheckoutPage from './pages/CheckoutPage';
@@ -33,6 +34,7 @@ function App() {
               <Layout>
                 <Routes>
                   <Route path="/" element={<HomePage />} />
+                  <Route path="/home" element={<Home />} />
                   <Route 
                     path="/products" 
                     element={
