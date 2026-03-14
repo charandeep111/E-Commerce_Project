@@ -8,6 +8,14 @@ dotenv.config();
 
 const app = express();
 
+// Verify critical environment variables
+if (!process.env.JWT_SECRET) {
+    console.warn('WARNING: JWT_SECRET is not defined. Authentication will fail.');
+}
+if (!process.env.MONGODB_URI && !process.env.MONGO_URI) {
+    console.warn('WARNING: MONGODB_URI/MONGO_URI is not defined. Database connection will fail.');
+}
+
 const corsOptions = {
     origin: process.env.CLIENT_URL || '*',
     credentials: process.env.CLIENT_URL ? true : false,

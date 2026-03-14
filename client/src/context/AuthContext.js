@@ -17,8 +17,14 @@ export const AuthProvider = ({ children }) => {
                     const { data } = await api.get('/auth/profile');
                     setUser(data);
                 } catch (error) {
-                    // Token expired or invalid
-                    localStorage.removeItem('token');
+                    // Only remove token if it's a 401 or 403 (Authentication issues)
+                    // If it's a network error (server sleeping), keep the token and try again later
+                    if (error.response && (error.response.status === 401 || error.response.status === 403)) {
+                        console.error('Session expired or invalid token.');
+                        localStorage.removeItem('token');
+                    } else {
+                        console.warn('Backend is unreachable or booting up. Keeping token.');
+                    }
                 }
             }
             setLoading(false);

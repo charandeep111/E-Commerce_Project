@@ -43,6 +43,24 @@ To verify the system is working, you can check these production endpoints:
 
 ---
 
+## 🔐 Persistent Authentication Checklist
+
+If login/signup "breaks" after a restart, check these 3 things:
+
+1.  **JWT_SECRET must be permanent:**
+    - Go to **Render Dashboard** -> **Environment**.
+    - Ensure `JWT_SECRET` is set manually. 
+    - *Why?* If you don't set it, your server might be using a random one that changes every time it restarts, which logs everyone out.
+
+2.  **MONGODB_URI must be current:**
+    - Ensure your MongoDB Atlas user has not expired and the IP whitelist includes `0.0.0.0/0` (standard for Render).
+
+3.  **Server Hibernation:**
+    - On Render's Free tier, the server "sleeps" after 15 minutes of inactivity.
+    - If you see "Cannot reach the server" in React, just wait 30 seconds for the server to wake up and try again. I have added code to explain this to your users in the UI.
+
+---
+
 ## 🚀 How to deploy updates
 
 1.  **Backend:** Push your code to GitHub. Render is likely configured to "Auto-Deploy" whenever you push to your main branch.

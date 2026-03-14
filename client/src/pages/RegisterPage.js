@@ -20,7 +20,15 @@ const RegisterPage = () => {
             const redirect = params.get('redirect');
             navigate(redirect || '/');
         } catch (err) {
-            setError(err.response?.data?.msg || 'Failed to register');
+            if (err.response) {
+                // Server responded with an error (4xx, 5xx)
+                setError(err.response.data?.msg || 'Registration failed');
+            } else if (err.request) {
+                // Request was made but no response (Network error)
+                setError('Cannot reach the server. It might be starting up, please try again in a few seconds.');
+            } else {
+                setError('An unexpected error occurred. Please try again.');
+            }
         }
     };
 
