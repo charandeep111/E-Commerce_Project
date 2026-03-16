@@ -30,10 +30,6 @@ app.use((req, res, next) => {
     next();
 });
 
-// Connect to MongoDB
-connectDB();
-
-// Simple health-check route
 app.get('/api/health', (req, res) => res.json({ status: 'OK' }));
 
 // ─── Routes ─────────────────────────────────────────────────────────
@@ -64,7 +60,18 @@ app.use('/api/wishlist', wishlistRoutes);
 const copilotRoutes = require('./src/routes/copilot');
 app.use('/api/copilot', copilotRoutes);
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+// Connect to MongoDB and start server
+const startServer = async () => {
+    try {
+        await connectDB();
+        const PORT = process.env.PORT || 5000;
+        app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+    } catch (err) {
+        console.error('Failed to start server:', err.message);
+        process.exit(1);
+    }
+};
+
+startServer();
 
 module.exports = app;

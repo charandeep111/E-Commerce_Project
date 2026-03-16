@@ -16,6 +16,7 @@ const connectDB = async () => {
         console.log('SUCCESS: MongoDB connected to Atlas');
     } catch (err) {
         console.error('ERROR: MongoDB connection failure:', err.message);
+        throw err; // Re-throw to prevent server startup
     }
 };
 
